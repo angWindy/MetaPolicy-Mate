@@ -1,0 +1,21 @@
+.wrapper {
+  margin-top: 18px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-card, 18px);
+  background: var(--color-card, #fff);
+  box-shadow: var(--shadow-card, 0 8px 24px rgb(15 23 42 / 6%));
+  padding: 18px;
+}
+
+.placeholder {
+  margin: 0;
+  color: var(--color-text-muted, #64748b);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.error {
+  margin: 0;
+  color: #b91c1c;
+  font-size: 13px;
+}

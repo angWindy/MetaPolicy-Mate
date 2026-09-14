@@ -1,0 +1,510 @@
+@startuml class_diagram_A0_full
+
+skinparam roundcorner 6
+skinparam packageStyle rectangle
+skinparam class {
+    BackgroundColor White
+    BorderColor #7A6FD8
+    ArrowColor #444444
+}
+
+title
+Class Diagram - Nhom A0: Quan ly danh muc van ban quy chuan/tieu chuan (A0-01 -> A0-06)
+Multi-tenant architecture
+end title
+
+' ===================== DOMAIN LAYER =====================
+package "Domain" {
+
+    class Tenant {
+        -UUID id
+        -String tenCoQuan
+        -String maTenant
+    }
+
+    enum DocumentStatus {
+        CHO_XU_LY_NOI_DUNG
+        HIEU_LUC
+        HET_HIEU_LUC
+        BI_THAY_THE
+    }
+
+    class RegulatoryDocument {
+        -UUID id
+        -String maHieu
+        -String tenDayDu
+        -String coQuanBanHanh
+        -Date ngayBanHanh
+        -Date ngayHieuLuc
+        -DocumentStatus trangThai
+        -String fileUrl
+        -String fileChecksum
+        -UUID tenantId
+        -int version
+        --
+        +updateMetadata(dto) : void
+        +markAsSuperseded(newDocId) : void
+        +attachFile(fileUrl, checksum) : void
+    }
+
+    enum RelationType {
+        THAY_THE_TOAN_BO
+        SUA_DOI_MOT_PHAN
+    }
+
+    class DocumentRelation {
+        -UUID id
+        -UUID sourceDocId
+        -UUID targetDocId
+        -RelationType loaiQuanHe
+        -String ghiChuPhamVi
+        -UUID tenantId
+        -DateTime createdAt
+        --
+        +conflictsWith(other) : bool
+    }
+
+    enum ApplicationScopeType {
+        BAT_BUOC
+        THAM_KHAO
+    }
+
+    class DocumentApplicationScope {
+        -UUID id
+        -UUID qcvnDocId
+        -UUID tcvnDocId
+        -String phamViVienDan
+        -ApplicationScopeType loaiApDung
+        -UUID tenantId
+        -int qcvnVersion
+    }
+
+    enum AlertLevel {
+        CHO_XU_LY
+        KHAN_CAP
+        DA_XU_LY
+        DA_DONG
+    }
+
+    class EffectivenessAlert {
+        -UUID id
+        -UUID relatedDocumentId
+        -String tenVanBanDuKien
+        -Date ngayBanHanhDuKien
+        -AlertLevel mucCanhBao
+        -UUID xuLyBoi
+        -DateTime ngayXuLy
+        -UUID tenantId
+        --
+        +escalate() : void
+        +resolve(action, byUser) : void
+    }
+
+    class User {
+        -UUID id
+        -String hoTen
+        -Role vaiTro
+        -UUID tenantId
+    }
+
+    enum Role {
+        THAM_TRA_VIEN
+        CHUYEN_GIA_PHE_DUYET
+        ADMIN
+    }
+}
+
+' ===================== MULTI-TENANT AMBIENT CONTEXT (Singleton) =====================
+package "Multi-tenant Context" {
+
+    class TenantContext <<(S,#FF7700) Singleton>> {
+        {static} -ThreadLocal<Tenant> current
+        --
+        {static} +getCurrentTenant() : Tenant
+        {static} +setCurrentTenant(Tenant) : void
+    }
+}
+
+' ===================== APPLICATION / USE-CASE LAYER =====================
+package "Application (Use Case)" {
+
+    class DocumentCatalogService {
+        -IDocumentRepository repo
+        -ChangeLogPublisher logPublisher
+        -AccessControlService accessControl
+        --
+        +createDocument(dto) : RegulatoryDocument
+        +updateMetadata(id, dto) : RegulatoryDocument
+        +changeStatus(id, status) : void
+        +listDocuments(criteria) : List<RegulatoryDocument>
+    }
+
+    class DocumentUploadService {
+        -IDocumentRepository repo
+        -IUploadValidator validatorChain
+        -FileStorageFactory storageFactory
+        -ChangeLogPublisher logPublisher
+        -AccessControlService accessControl
+        --
+        +uploadNewDocument(request) : RegulatoryDocument
+        +replaceDocumentFile(id, file) : RegulatoryDocument
+    }
+
+    class DocumentRelationService {
+        -IDocumentRelationRepository relationRepo
+        -IDocumentRepository docRepo
+        -DocumentCatalogService catalogService
+        -ChangeLogPublisher logPublisher
+        -AccessControlService accessControl
+        --
+        +createRelation(dto) : DocumentRelation
+        +listRelations(docId) : List<DocumentRelation>
+        -checkConflict(dto) : void
+    }
+
+    class DocumentApplicationScopeService {
+        -IDocumentApplicationScopeRepository scopeRepo
+        -IDocumentRepository docRepo
+        -ChangeLogPublisher logPublisher
+        -AccessControlService accessControl
+        --
+        +addApplicationScope(dto) : DocumentApplicationScope
+        +listApplicationScopes(qcvnDocId) : List<DocumentApplicationScope>
+    }
+
+    class DocumentEffectivenessMonitorService {
+        -IEffectivenessAlertRepository alertRepo
+        -IDocumentRepository docRepo
+        -IAlertLevelPolicy alertPolicy
+        -ChangeLogPublisher logPublisher
+        -AccessControlService accessControl
+        --
+        +declareManualAlert(dto) : EffectivenessAlert
+        +scanExpiringDocuments() : void
+        +resolveAlert(id, action, byUser) : void
+    }
+
+    class DocumentHistoryQueryService {
+        -IChangeLogRepository logRepo
+        -AccessControlService accessControl
+        --
+        +getHistory(docId, filter) : List<ChangeLogEntry>
+    }
+
+    class AccessControlService {
+        +checkPermission(User, action) : bool
+    }
+
+    class DocumentUploadRequest <<DTO>> {
+        +String maHieu
+        +String tenDayDu
+        +String coQuanBanHanh
+        +Date ngayBanHanh
+        +Date ngayHieuLuc
+        +File file
+        +UUID replacesDocumentId
+    }
+
+    class DocumentFilterCriteria <<DTO>> {
+        +String maHieu
+        +DocumentStatus trangThai
+        +Date tuNgay
+        +Date denNgay
+    }
+
+    class HistoryFilter <<DTO>> {
+        +String actionType
+        +Date tuNgay
+        +Date denNgay
+    }
+}
+
+' ===================== FACADE (aggregated document detail: A0-01 step 3) =====================
+package "Facade (Document Detail Aggregation)" {
+
+    class DocumentDetailFacade {
+        -DocumentCatalogService catalogService
+        -DocumentRelationService relationService
+        -DocumentApplicationScopeService scopeService
+        -DocumentHistoryQueryService historyService
+        --
+        +getFullDetail(docId) : DocumentDetailView
+    }
+
+    class DocumentDetailView <<DTO>> {
+        +RegulatoryDocument document
+        +List<DocumentRelation> relations
+        +List<DocumentApplicationScope> applicationScopes
+        +List<ChangeLogEntry> recentChangelog
+    }
+}
+
+' ===================== REPOSITORY PATTERN (tenant-scoped persistence) =====================
+package "Persistence (Repository Pattern)" {
+
+    interface IDocumentRepository {
+        +save(doc) : RegulatoryDocument
+        +findById(id) : RegulatoryDocument
+        +findByCode(maHieu, tenantId) : RegulatoryDocument
+        +findAll(criteria) : List<RegulatoryDocument>
+    }
+
+    class DocumentRepositoryImpl {
+        -DataSource ds
+        --
+        +save(doc) : RegulatoryDocument
+        +findById(id) : RegulatoryDocument
+        +findByCode(maHieu, tenantId) : RegulatoryDocument
+        +findAll(criteria) : List<RegulatoryDocument>
+    }
+
+    interface IDocumentRelationRepository {
+        +save(rel) : DocumentRelation
+        +findByDocument(docId) : List<DocumentRelation>
+        +findActiveSupersessionOf(targetDocId) : DocumentRelation
+    }
+
+    class DocumentRelationRepositoryImpl {
+        -DataSource ds
+        --
+        +save(rel) : DocumentRelation
+        +findByDocument(docId) : List<DocumentRelation>
+        +findActiveSupersessionOf(targetDocId) : DocumentRelation
+    }
+
+    interface IDocumentApplicationScopeRepository {
+        +save(scope) : DocumentApplicationScope
+        +findByQcvnDocument(qcvnDocId) : List<DocumentApplicationScope>
+    }
+
+    class DocumentApplicationScopeRepositoryImpl {
+        -DataSource ds
+        --
+        +save(scope) : DocumentApplicationScope
+        +findByQcvnDocument(qcvnDocId) : List<DocumentApplicationScope>
+    }
+
+    interface IEffectivenessAlertRepository {
+        +save(alert) : EffectivenessAlert
+        +findOpenAlerts() : List<EffectivenessAlert>
+        +findExpiringDocuments(withinDays) : List<RegulatoryDocument>
+    }
+
+    class EffectivenessAlertRepositoryImpl {
+        -DataSource ds
+        --
+        +save(alert) : EffectivenessAlert
+        +findOpenAlerts() : List<EffectivenessAlert>
+        +findExpiringDocuments(withinDays) : List<RegulatoryDocument>
+    }
+
+    interface IChangeLogRepository {
+        +save(entry) : ChangeLogEntry
+        +findByDocument(docId, filter) : List<ChangeLogEntry>
+    }
+
+    class ChangeLogRepositoryImpl {
+        -DataSource ds
+        --
+        +save(entry) : ChangeLogEntry
+        +findByDocument(docId, filter) : List<ChangeLogEntry>
+    }
+}
+
+' ===================== CHAIN OF RESPONSIBILITY (upload validation) =====================
+package "Upload Validation (Chain of Responsibility)" {
+
+    interface IUploadValidator {
+        -IUploadValidator next
+        --
+        +setNext(v) : IUploadValidator
+        +validate(request) : void
+    }
+
+    class PdfFormatValidator {
+        +validate(request) : void
+    }
+
+    class DuplicateCodeValidator {
+        +validate(request) : void
+    }
+}
+
+' ===================== STRATEGY + FACTORY METHOD (tenant-aware file storage) =====================
+package "File Storage (Strategy + Factory Method)" {
+
+    interface IFileStorageStrategy {
+        +store(file, tenant) : String
+        +delete(fileUrl) : void
+    }
+
+    class LocalFileStorageStrategy {
+        +store(file, tenant) : String
+        +delete(fileUrl) : void
+    }
+
+    class S3TenantIsolatedStorageStrategy {
+        -String bucketPrefix
+        --
+        +store(file, tenant) : String
+        +delete(fileUrl) : void
+    }
+
+    class FileStorageFactory {
+        {static} +getStrategy(tenant) : IFileStorageStrategy
+    }
+}
+
+' ===================== STRATEGY PATTERN (effectiveness alert-level policy, A0-04) =====================
+package "Effectiveness Alert Policy (Strategy Pattern)" {
+
+    interface IAlertLevelPolicy {
+        +evaluate(daysUntilExpiry) : AlertLevel
+    }
+
+    class DefaultAlertLevelPolicy {
+        -int urgentThresholdDays
+        --
+        +evaluate(daysUntilExpiry) : AlertLevel
+    }
+}
+
+' ===================== OBSERVER PATTERN (audit / changelog A0-06) =====================
+package "Audit / Changelog (Observer Pattern)" {
+
+    class ChangeLogPublisher {
+        -List<IChangeLogObserver> observers
+        --
+        +subscribe(observer) : void
+        +publish(event) : void
+    }
+
+    interface IChangeLogObserver {
+        +onDocumentChanged(event) : void
+    }
+
+    class AuditChangeLogObserver {
+        -IChangeLogRepository logRepo
+        --
+        +onDocumentChanged(event) : void
+    }
+
+    class DocumentChangeEvent <<DTO>> {
+        +UUID documentId
+        +String action
+        +UUID performedBy
+    }
+
+    class ChangeLogEntry {
+        -UUID id
+        -UUID documentId
+        -String action
+        -UUID performedBy
+        -DateTime performedAt
+        -String detail
+    }
+}
+
+' ===================== RELATIONSHIPS =====================
+
+RegulatoryDocument "0..*" --> "1" DocumentStatus
+RegulatoryDocument "0..*" --> "0..1" Tenant : thuoc ve >
+User "0..*" --> "0..1" Tenant : thuoc ve >
+User --> Role
+
+DocumentRelation "0..*" --> "1" RegulatoryDocument : nguon (source) >
+DocumentRelation "0..*" --> "1" RegulatoryDocument : dich (target) >
+DocumentRelation --> RelationType
+
+DocumentApplicationScope "0..*" --> "1" RegulatoryDocument : QCVN >
+DocumentApplicationScope "0..*" --> "1" RegulatoryDocument : TCVN vien dan >
+DocumentApplicationScope --> ApplicationScopeType
+
+EffectivenessAlert "0..*" --> "0..1" RegulatoryDocument : lien quan >
+EffectivenessAlert --> AlertLevel
+
+DocumentCatalogService ..> TenantContext : uses
+DocumentUploadService ..> TenantContext : uses
+DocumentRelationService ..> TenantContext : uses
+DocumentApplicationScopeService ..> TenantContext : uses
+DocumentEffectivenessMonitorService ..> TenantContext : uses
+DocumentRepositoryImpl ..> TenantContext : scopes query by
+
+DocumentCatalogService --> IDocumentRepository
+DocumentCatalogService --> ChangeLogPublisher
+DocumentCatalogService --> AccessControlService
+DocumentCatalogService ..> DocumentFilterCriteria : uses
+
+DocumentUploadService --> IDocumentRepository
+DocumentUploadService --> IUploadValidator : chain head >
+DocumentUploadService --> FileStorageFactory
+DocumentUploadService --> ChangeLogPublisher
+DocumentUploadService --> AccessControlService
+DocumentUploadService ..> DocumentUploadRequest : uses
+DocumentUploadService ..> DocumentRelationService : declares relation (A0-03) >
+
+DocumentRelationService --> IDocumentRelationRepository
+DocumentRelationService --> IDocumentRepository
+DocumentRelationService --> DocumentCatalogService : changeStatus(BI_THAY_THE) >
+DocumentRelationService --> ChangeLogPublisher
+DocumentRelationService --> AccessControlService
+DocumentRelationService ..> DocumentRelation : creates >
+
+DocumentApplicationScopeService --> IDocumentApplicationScopeRepository
+DocumentApplicationScopeService --> IDocumentRepository
+DocumentApplicationScopeService --> ChangeLogPublisher
+DocumentApplicationScopeService --> AccessControlService
+DocumentApplicationScopeService ..> DocumentApplicationScope : creates >
+
+DocumentEffectivenessMonitorService --> IEffectivenessAlertRepository
+DocumentEffectivenessMonitorService --> IDocumentRepository
+DocumentEffectivenessMonitorService --> IAlertLevelPolicy
+DocumentEffectivenessMonitorService --> ChangeLogPublisher
+DocumentEffectivenessMonitorService --> AccessControlService
+DocumentEffectivenessMonitorService ..> EffectivenessAlert : creates >
+
+DefaultAlertLevelPolicy ..|> IAlertLevelPolicy
+
+DocumentHistoryQueryService --> IChangeLogRepository
+DocumentHistoryQueryService --> AccessControlService
+DocumentHistoryQueryService ..> HistoryFilter : uses
+
+DocumentDetailFacade --> DocumentCatalogService
+DocumentDetailFacade --> DocumentRelationService
+DocumentDetailFacade --> DocumentApplicationScopeService
+DocumentDetailFacade --> DocumentHistoryQueryService
+DocumentDetailFacade ..> DocumentDetailView : builds >
+
+AccessControlService ..> User : checks
+
+DocumentRepositoryImpl ..|> IDocumentRepository
+DocumentRepositoryImpl --> RegulatoryDocument : manages >
+
+DocumentRelationRepositoryImpl ..|> IDocumentRelationRepository
+DocumentRelationRepositoryImpl --> DocumentRelation : manages >
+
+DocumentApplicationScopeRepositoryImpl ..|> IDocumentApplicationScopeRepository
+DocumentApplicationScopeRepositoryImpl --> DocumentApplicationScope : manages >
+
+EffectivenessAlertRepositoryImpl ..|> IEffectivenessAlertRepository
+EffectivenessAlertRepositoryImpl --> EffectivenessAlert : manages >
+
+ChangeLogRepositoryImpl ..|> IChangeLogRepository
+ChangeLogRepositoryImpl --> ChangeLogEntry : manages >
+
+IUploadValidator o-- IUploadValidator : next
+PdfFormatValidator ..|> IUploadValidator
+DuplicateCodeValidator ..|> IUploadValidator
+
+FileStorageFactory ..> IFileStorageStrategy : creates
+LocalFileStorageStrategy ..|> IFileStorageStrategy
+S3TenantIsolatedStorageStrategy ..|> IFileStorageStrategy
+
+ChangeLogPublisher o-- IChangeLogObserver : notifies
+AuditChangeLogObserver ..|> IChangeLogObserver
+AuditChangeLogObserver --> IChangeLogRepository
+AuditChangeLogObserver --> ChangeLogEntry : creates >
+ChangeLogPublisher ..> DocumentChangeEvent : publishes
+ChangeLogEntry --> RegulatoryDocument : references >
+
+@enduml

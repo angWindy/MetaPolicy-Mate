@@ -1,0 +1,17 @@
+{
+  "collection": "p234_qdrant",
+  "postgres_count": 2369,
+  "qdrant_count": 2369,
+  "missing_count": 0,
+  "stale_count": 0,
+  "invalid_payload_count": 0,
+  "content_hash_mismatch_count": 0,
+  "samples": {
+    "missing_ids": [],
+    "stale_ids": [],
+    "invalid_payload_ids": [],
+    "content_hash_mismatch_ids": []
+  },
+  "aligned": true,
+  "repaired_count": 0
+}

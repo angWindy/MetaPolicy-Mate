@@ -1,0 +1,43 @@
+.state {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 36px 24px;
+  border: 1px dashed var(--color-border, #e2e8f0);
+  border-radius: var(--radius-card, 18px);
+  background: color-mix(in srgb, var(--color-card, #fff) 75%, transparent);
+  text-align: center;
+}
+
+.icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-primary, #2563eb) 8%, white);
+  color: var(--color-primary, #2563eb);
+  font-size: 22px;
+}
+
+.state h2 {
+  margin: 14px 0 0;
+  color: var(--color-text, #0f172a);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.state p {
+  max-width: 480px;
+  margin: 7px 0 0;
+  color: var(--color-text-muted, #64748b);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.action {
+  margin-top: 16px;
+}
+

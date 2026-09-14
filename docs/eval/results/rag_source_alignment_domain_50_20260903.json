@@ -1,0 +1,2251 @@
+{
+  "summary": {
+    "total": 50,
+    "source_groups_aligned": 50,
+    "expected_document_present": 50,
+    "labelled_chunk_ids_current": 0
+  },
+  "cases": [
+    {
+      "id": "D01",
+      "evidence_groups": [
+        [
+          "Cử nhân Tốt nghiệp THPT 4 năm 132 tín chỉ",
+          "132 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Cử nhân Tốt nghiệp THPT 4 năm 132 tín chỉ",
+            "132 tín chỉ"
+          ],
+          "matched_alternative": "Cử nhân Tốt nghiệp THPT 4 năm 132 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "50729763-cba8-5274-a334-fc1d2e974d92"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D02",
+      "evidence_groups": [
+        [
+          "132 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "132 tín chỉ"
+          ],
+          "matched_alternative": "132 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "50729763-cba8-5274-a334-fc1d2e974d92"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D03",
+      "evidence_groups": [
+        [
+          "1,5 năm"
+        ],
+        [
+          "48 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "1,5 năm"
+          ],
+          "matched_alternative": "1,5 năm",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "48 tín chỉ"
+          ],
+          "matched_alternative": "48 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "c91637c4-c11b-5e5e-8042-7e3c1e3d8c15"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D04",
+      "evidence_groups": [
+        [
+          "1,5 năm"
+        ],
+        [
+          "48 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "1,5 năm"
+          ],
+          "matched_alternative": "1,5 năm",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "48 tín chỉ"
+          ],
+          "matched_alternative": "48 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "c91637c4-c11b-5e5e-8042-7e3c1e3d8c15"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D05",
+      "evidence_groups": [
+        [
+          "Thạc sĩ"
+        ],
+        [
+          "2 năm"
+        ],
+        [
+          "60 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Thạc sĩ"
+          ],
+          "matched_alternative": "Thạc sĩ",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "2 năm"
+          ],
+          "matched_alternative": "2 năm",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "60 tín chỉ"
+          ],
+          "matched_alternative": "60 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 83,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "03cf98bf-8b72-5375-b569-cbee142c5c4a",
+        "07f24d38-7f4b-5485-89a6-2af239bac3b8",
+        "108a7c93-178d-5884-b5f9-9383811e1f0f",
+        "23ee1b6a-1508-5623-b8f6-ec6644506a55",
+        "277b18ee-3819-599a-b2bf-3d9d92a8459d",
+        "3323e3c1-e7e6-5776-83e0-f67e27ef0e69",
+        "3eab8caa-fc0f-59da-9b94-66d01b25c3be",
+        "43bf802f-d322-5709-b42d-7125936d76ff",
+        "447f1fdf-265f-55cc-bacd-3adba5300225",
+        "4665b7a8-df3c-5eb2-b358-2be1ecd395f2",
+        "4f09d857-6c8e-59e1-84c3-7ce7754da415",
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "5bef4a83-74f6-58ab-b43a-695925c49e39",
+        "620c9ac3-879d-5356-9055-c36963ba0204",
+        "62650108-9520-5c07-867d-f745c281015c",
+        "6be005d6-eba4-5c5c-abc4-7167b3cece94",
+        "6d171c00-ba89-5f07-ab00-bba7708dce75",
+        "743a3cbd-c2f3-5102-a7ae-11d520a3ba00",
+        "78dcb3cd-b5bd-54e2-8b0f-e2c9cff894c3",
+        "8214ee01-d430-5e12-b49b-f9972038e447",
+        "8289ee93-d24e-56f4-9c3d-636b2da95618",
+        "83064e58-006a-580d-afcb-d23344fc01dd",
+        "88191f86-4842-552c-b39a-36df5b0bcb8e",
+        "8d1a8b69-8a1c-53b0-af47-6a6ba1255b04",
+        "9b5c38c5-7b43-50f3-b6a6-b57120c06914",
+        "abfd2930-b30c-5c62-8451-ffb91411fdcd",
+        "af8e2ddf-3a13-5c5d-a374-17031cee3c8c",
+        "b001906a-178d-5ff5-bccf-bc000120e67d",
+        "b6e41e8a-5d01-5458-ad8e-a0c6046f0869",
+        "b8998856-324c-5e77-8c85-0114645ea309",
+        "c0bb6b52-2497-5955-a75d-920ac3f2b3a1",
+        "c849b03a-cbd1-570a-a273-cd5bfd4d95f9",
+        "c85e521d-4703-5852-a93b-5d292d816d4a",
+        "c91637c4-c11b-5e5e-8042-7e3c1e3d8c15",
+        "cd5cb7ef-3a7f-55de-8fcd-e0b4ce2b743a",
+        "d252dbe9-9924-56f3-8f5e-63adcc8c50e8",
+        "d29d1274-9a22-598d-aab2-fc51763967bf",
+        "e11c9c89-f0b3-5bd4-8e23-e7daad28a067",
+        "e639049c-de3b-511b-ac3b-5b6c11821243",
+        "f91dcaa0-8517-55b1-b9d9-35baa5b1572d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D06",
+      "evidence_groups": [
+        [
+          "Thạc sĩ"
+        ],
+        [
+          "2 năm"
+        ],
+        [
+          "60 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Thạc sĩ"
+          ],
+          "matched_alternative": "Thạc sĩ",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "2 năm"
+          ],
+          "matched_alternative": "2 năm",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "60 tín chỉ"
+          ],
+          "matched_alternative": "60 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 83,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "03cf98bf-8b72-5375-b569-cbee142c5c4a",
+        "07f24d38-7f4b-5485-89a6-2af239bac3b8",
+        "108a7c93-178d-5884-b5f9-9383811e1f0f",
+        "23ee1b6a-1508-5623-b8f6-ec6644506a55",
+        "277b18ee-3819-599a-b2bf-3d9d92a8459d",
+        "3323e3c1-e7e6-5776-83e0-f67e27ef0e69",
+        "3eab8caa-fc0f-59da-9b94-66d01b25c3be",
+        "43bf802f-d322-5709-b42d-7125936d76ff",
+        "447f1fdf-265f-55cc-bacd-3adba5300225",
+        "4665b7a8-df3c-5eb2-b358-2be1ecd395f2",
+        "4f09d857-6c8e-59e1-84c3-7ce7754da415",
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "5bef4a83-74f6-58ab-b43a-695925c49e39",
+        "620c9ac3-879d-5356-9055-c36963ba0204",
+        "62650108-9520-5c07-867d-f745c281015c",
+        "6be005d6-eba4-5c5c-abc4-7167b3cece94",
+        "6d171c00-ba89-5f07-ab00-bba7708dce75",
+        "743a3cbd-c2f3-5102-a7ae-11d520a3ba00",
+        "78dcb3cd-b5bd-54e2-8b0f-e2c9cff894c3",
+        "8214ee01-d430-5e12-b49b-f9972038e447",
+        "8289ee93-d24e-56f4-9c3d-636b2da95618",
+        "83064e58-006a-580d-afcb-d23344fc01dd",
+        "88191f86-4842-552c-b39a-36df5b0bcb8e",
+        "8d1a8b69-8a1c-53b0-af47-6a6ba1255b04",
+        "9b5c38c5-7b43-50f3-b6a6-b57120c06914",
+        "abfd2930-b30c-5c62-8451-ffb91411fdcd",
+        "af8e2ddf-3a13-5c5d-a374-17031cee3c8c",
+        "b001906a-178d-5ff5-bccf-bc000120e67d",
+        "b6e41e8a-5d01-5458-ad8e-a0c6046f0869",
+        "b8998856-324c-5e77-8c85-0114645ea309",
+        "c0bb6b52-2497-5955-a75d-920ac3f2b3a1",
+        "c849b03a-cbd1-570a-a273-cd5bfd4d95f9",
+        "c85e521d-4703-5852-a93b-5d292d816d4a",
+        "c91637c4-c11b-5e5e-8042-7e3c1e3d8c15",
+        "cd5cb7ef-3a7f-55de-8fcd-e0b4ce2b743a",
+        "d252dbe9-9924-56f3-8f5e-63adcc8c50e8",
+        "d29d1274-9a22-598d-aab2-fc51763967bf",
+        "e11c9c89-f0b3-5bd4-8e23-e7daad28a067",
+        "e639049c-de3b-511b-ac3b-5b6c11821243",
+        "f91dcaa0-8517-55b1-b9d9-35baa5b1572d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D07",
+      "evidence_groups": [
+        [
+          "Tiến sĩ Tốt nghiệp thạc sĩ 3 năm 106 tín chỉ",
+          "3 năm"
+        ],
+        [
+          "106 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Tiến sĩ Tốt nghiệp thạc sĩ 3 năm 106 tín chỉ",
+            "3 năm"
+          ],
+          "matched_alternative": "Tiến sĩ Tốt nghiệp thạc sĩ 3 năm 106 tín chỉ",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "106 tín chỉ"
+          ],
+          "matched_alternative": "106 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "50729763-cba8-5274-a334-fc1d2e974d92"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D08",
+      "evidence_groups": [
+        [
+          "3 năm"
+        ],
+        [
+          "106 tín chỉ"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "3 năm"
+          ],
+          "matched_alternative": "3 năm",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "106 tín chỉ"
+          ],
+          "matched_alternative": "106 tín chỉ",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 13,
+      "matched_documents": [
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "1336a2f8-0fa1-54d3-8db0-c5f32e884f7a",
+        "3abb2bfd-01ee-55ae-a33e-f4adf8d8c20a",
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "6d171c00-ba89-5f07-ab00-bba7708dce75",
+        "c91637c4-c11b-5e5e-8042-7e3c1e3d8c15"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D09",
+      "evidence_groups": [
+        [
+          "50 giờ học"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "50 giờ học"
+          ],
+          "matched_alternative": "50 giờ học",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "ef15ce78-11d3-58de-9e9d-7ad96b6a1ea5"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D10",
+      "evidence_groups": [
+        [
+          "50 giờ học"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "50 giờ học"
+          ],
+          "matched_alternative": "50 giờ học",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "ef15ce78-11d3-58de-9e9d-7ad96b6a1ea5"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D11",
+      "evidence_groups": [
+        [
+          "15 giờ giảng"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "15 giờ giảng"
+          ],
+          "matched_alternative": "15 giờ giảng",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "ef15ce78-11d3-58de-9e9d-7ad96b6a1ea5"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D12",
+      "evidence_groups": [
+        [
+          "15 giờ giảng"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "15 giờ giảng"
+          ],
+          "matched_alternative": "15 giờ giảng",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "ef15ce78-11d3-58de-9e9d-7ad96b6a1ea5"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D13",
+      "evidence_groups": [
+        [
+          "9,5"
+        ],
+        [
+          "10"
+        ],
+        [
+          "A+"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "9,5"
+          ],
+          "matched_alternative": "9,5",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "10"
+          ],
+          "matched_alternative": "10",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "A+"
+          ],
+          "matched_alternative": "A+",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 219,
+      "matched_documents": [
+        "RAW-HUCE-1124-quy-dinh-ve-che-do",
+        "RAW-HUCE-1125-quy-che-kpis",
+        "RAW-HUCE-1126-quy-che-tien-luong",
+        "RAW-HUCE-1145-quy-dinh-cham-cong",
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-25-ke-hoach-nhiem-ky-202",
+        "RAW-HUCE-huong-dan-ve-cham-cong",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-che-nhom-chuyen-mon",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUCE-thong-tu-quy-dinh-che-do",
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "06016b2d-2103-5585-a34c-355c7a274b14",
+        "09dd911c-d881-58f0-8182-abe0338baed3",
+        "0c8a8d46-276e-5ba7-8636-bf0bf629131b",
+        "259b0aed-9a3e-587b-8f61-cb7c12cb5b04",
+        "28598f62-0db2-531b-96a4-cbea3c21e7a8",
+        "3cefb562-9848-5110-9901-019894199817",
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "8171fa7b-701d-5ee2-a811-3b100dde934f",
+        "9427d4dd-8263-53a5-a145-874752d281d7",
+        "9643d531-f828-52aa-92e8-cba9c329e601",
+        "a27847c5-bd7c-5621-93ec-c0a70f3f43a6"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D14",
+      "evidence_groups": [
+        [
+          "9,5"
+        ],
+        [
+          "10"
+        ],
+        [
+          "A+"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "9,5"
+          ],
+          "matched_alternative": "9,5",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "10"
+          ],
+          "matched_alternative": "10",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "A+"
+          ],
+          "matched_alternative": "A+",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 219,
+      "matched_documents": [
+        "RAW-HUCE-1124-quy-dinh-ve-che-do",
+        "RAW-HUCE-1125-quy-che-kpis",
+        "RAW-HUCE-1126-quy-che-tien-luong",
+        "RAW-HUCE-1145-quy-dinh-cham-cong",
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-25-ke-hoach-nhiem-ky-202",
+        "RAW-HUCE-huong-dan-ve-cham-cong",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-che-nhom-chuyen-mon",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUCE-thong-tu-quy-dinh-che-do",
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "06016b2d-2103-5585-a34c-355c7a274b14",
+        "09dd911c-d881-58f0-8182-abe0338baed3",
+        "0c8a8d46-276e-5ba7-8636-bf0bf629131b",
+        "259b0aed-9a3e-587b-8f61-cb7c12cb5b04",
+        "28598f62-0db2-531b-96a4-cbea3c21e7a8",
+        "3cefb562-9848-5110-9901-019894199817",
+        "50729763-cba8-5274-a334-fc1d2e974d92",
+        "8171fa7b-701d-5ee2-a811-3b100dde934f",
+        "9427d4dd-8263-53a5-a145-874752d281d7",
+        "9643d531-f828-52aa-92e8-cba9c329e601",
+        "a27847c5-bd7c-5621-93ec-c0a70f3f43a6"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D15",
+      "evidence_groups": [
+        [
+          "8,5"
+        ],
+        [
+          "9,4"
+        ],
+        [
+          "Điểm chữ quy đổi"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "8,5"
+          ],
+          "matched_alternative": "8,5",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "9,4"
+          ],
+          "matched_alternative": "9,4",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Điểm chữ quy đổi"
+          ],
+          "matched_alternative": "Điểm chữ quy đổi",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 10,
+      "matched_documents": [
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0c8a8d46-276e-5ba7-8636-bf0bf629131b",
+        "3e45a0cc-9b59-553f-bffb-76656a3a7aa8"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D16",
+      "evidence_groups": [
+        [
+          "8,5"
+        ],
+        [
+          "9,4"
+        ],
+        [
+          "Điểm chữ quy đổi"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "8,5"
+          ],
+          "matched_alternative": "8,5",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "9,4"
+          ],
+          "matched_alternative": "9,4",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Điểm chữ quy đổi"
+          ],
+          "matched_alternative": "Điểm chữ quy đổi",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 10,
+      "matched_documents": [
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0c8a8d46-276e-5ba7-8636-bf0bf629131b",
+        "3e45a0cc-9b59-553f-bffb-76656a3a7aa8"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D17",
+      "evidence_groups": [
+        [
+          "từ điểm D trở lên"
+        ],
+        [
+          "phải từ C trở lên"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "từ điểm D trở lên"
+          ],
+          "matched_alternative": "từ điểm D trở lên",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "phải từ C trở lên"
+          ],
+          "matched_alternative": "phải từ C trở lên",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "918663e6-51a1-527d-88cb-12ff783ed892"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D18",
+      "evidence_groups": [
+        [
+          "từ điểm D trở lên"
+        ],
+        [
+          "phải từ C trở lên"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "từ điểm D trở lên"
+          ],
+          "matched_alternative": "từ điểm D trở lên",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "phải từ C trở lên"
+          ],
+          "matched_alternative": "phải từ C trở lên",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "918663e6-51a1-527d-88cb-12ff783ed892"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D19",
+      "evidence_groups": [
+        [
+          "7 ngày"
+        ],
+        [
+          "vấn đáp"
+        ],
+        [
+          "hội đồng"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "7 ngày"
+          ],
+          "matched_alternative": "7 ngày",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "vấn đáp"
+          ],
+          "matched_alternative": "vấn đáp",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "hội đồng"
+          ],
+          "matched_alternative": "hội đồng",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 172,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-25-ke-hoach-nhiem-ky-202",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "101310bb-2ce3-5a68-9e37-19810302f607",
+        "1a4dfdfb-6b45-5333-be37-d1904f369b3e",
+        "25ea19b9-5dd0-5c77-ba0b-92080936443e",
+        "34b477e6-2c1d-58c0-9a06-2c53db5e0aa3",
+        "37051915-a2cb-5ce7-bcf7-9aa0661b3083",
+        "373f7311-6294-5e78-9f38-7940d6a40428",
+        "3e45a0cc-9b59-553f-bffb-76656a3a7aa8",
+        "441832ab-b635-5132-ae0a-63690e2a2d0b",
+        "45977495-fa68-5ef3-89aa-49f47a49b2fb",
+        "487f1a56-3b90-561f-a447-51f675f36969",
+        "4dbe9ae1-607c-5efa-99b5-6203e7fad68d",
+        "54e0b7c6-90d4-52c8-bc81-553f1bcec3fb",
+        "597081b4-820b-5e91-a382-2825659cf8df",
+        "60f2912d-db94-58de-b924-d1439d614e99",
+        "6d171c00-ba89-5f07-ab00-bba7708dce75",
+        "84ea7644-9ae8-521a-91e7-9e975b8a7cfd",
+        "8b778319-9a1a-530b-b770-e1d332d6400e",
+        "8f5bd0e7-78c1-575d-be13-05d3269e8c52",
+        "9427d4dd-8263-53a5-a145-874752d281d7",
+        "989ae1fd-3fa6-552f-b21e-968e8d14e11b",
+        "9dd46d5a-4a00-5e3c-8576-52d0f015b6bb",
+        "b54bb58a-e391-5837-9b10-c5fcc464dbec",
+        "b6fd59d7-2a16-5ad8-9478-feef74a4bb2a",
+        "ca353c9a-c4f6-5d6c-8dc9-8ee57176990d",
+        "cdc23c4c-d059-5ae7-9c9c-4dc03bf2d81b",
+        "d2aec435-549b-58f8-8d37-6f457c1a7175",
+        "d7e2b382-d2e7-5e7f-93da-8cec594b5cd5",
+        "e451a3c8-8f0e-58a2-b9fe-58635f5a96e4",
+        "ea351f64-4aa2-5218-afc2-22bf12d7ed0b",
+        "eda01b9e-0b10-58e3-b0eb-4f2eff2e7ff0",
+        "f5a3176d-4af6-5a59-b0dd-831347407b57",
+        "f7dd8b1b-4d43-5384-a801-761562126f66",
+        "f9cbb1f9-4064-5c05-9a62-be04d1d85b44"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D20",
+      "evidence_groups": [
+        [
+          "7 ngày"
+        ],
+        [
+          "vấn đáp"
+        ],
+        [
+          "hội đồng"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "7 ngày"
+          ],
+          "matched_alternative": "7 ngày",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "vấn đáp"
+          ],
+          "matched_alternative": "vấn đáp",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "hội đồng"
+          ],
+          "matched_alternative": "hội đồng",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 172,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-25-ke-hoach-nhiem-ky-202",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-thuc-hi",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "101310bb-2ce3-5a68-9e37-19810302f607",
+        "1a4dfdfb-6b45-5333-be37-d1904f369b3e",
+        "25ea19b9-5dd0-5c77-ba0b-92080936443e",
+        "34b477e6-2c1d-58c0-9a06-2c53db5e0aa3",
+        "37051915-a2cb-5ce7-bcf7-9aa0661b3083",
+        "373f7311-6294-5e78-9f38-7940d6a40428",
+        "3e45a0cc-9b59-553f-bffb-76656a3a7aa8",
+        "441832ab-b635-5132-ae0a-63690e2a2d0b",
+        "45977495-fa68-5ef3-89aa-49f47a49b2fb",
+        "487f1a56-3b90-561f-a447-51f675f36969",
+        "4dbe9ae1-607c-5efa-99b5-6203e7fad68d",
+        "54e0b7c6-90d4-52c8-bc81-553f1bcec3fb",
+        "597081b4-820b-5e91-a382-2825659cf8df",
+        "60f2912d-db94-58de-b924-d1439d614e99",
+        "6d171c00-ba89-5f07-ab00-bba7708dce75",
+        "84ea7644-9ae8-521a-91e7-9e975b8a7cfd",
+        "8b778319-9a1a-530b-b770-e1d332d6400e",
+        "8f5bd0e7-78c1-575d-be13-05d3269e8c52",
+        "9427d4dd-8263-53a5-a145-874752d281d7",
+        "989ae1fd-3fa6-552f-b21e-968e8d14e11b",
+        "9dd46d5a-4a00-5e3c-8576-52d0f015b6bb",
+        "b54bb58a-e391-5837-9b10-c5fcc464dbec",
+        "b6fd59d7-2a16-5ad8-9478-feef74a4bb2a",
+        "ca353c9a-c4f6-5d6c-8dc9-8ee57176990d",
+        "cdc23c4c-d059-5ae7-9c9c-4dc03bf2d81b",
+        "d2aec435-549b-58f8-8d37-6f457c1a7175",
+        "d7e2b382-d2e7-5e7f-93da-8cec594b5cd5",
+        "e451a3c8-8f0e-58a2-b9fe-58635f5a96e4",
+        "ea351f64-4aa2-5218-afc2-22bf12d7ed0b",
+        "eda01b9e-0b10-58e3-b0eb-4f2eff2e7ff0",
+        "f5a3176d-4af6-5a59-b0dd-831347407b57",
+        "f7dd8b1b-4d43-5384-a801-761562126f66",
+        "f9cbb1f9-4064-5c05-9a62-be04d1d85b44"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D21",
+      "evidence_groups": [
+        [
+          "tối đa 24 TC"
+        ],
+        [
+          "tối thiểu 12 TC"
+        ],
+        [
+          "tối đa 8 TC"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "tối đa 24 TC"
+          ],
+          "matched_alternative": "tối đa 24 TC",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tối thiểu 12 TC"
+          ],
+          "matched_alternative": "tối thiểu 12 TC",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tối đa 8 TC"
+          ],
+          "matched_alternative": "tối đa 8 TC",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "58c90fec-8a98-5a2c-83b0-45889b4dce51",
+        "c9e354ef-bc9e-5553-b06e-55c8b019c678",
+        "eb518525-a03a-526b-8659-8b64a6629b85"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D22",
+      "evidence_groups": [
+        [
+          "tối đa 24 TC"
+        ],
+        [
+          "tối thiểu 12 TC"
+        ],
+        [
+          "tối đa 8 TC"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "tối đa 24 TC"
+          ],
+          "matched_alternative": "tối đa 24 TC",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tối thiểu 12 TC"
+          ],
+          "matched_alternative": "tối thiểu 12 TC",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tối đa 8 TC"
+          ],
+          "matched_alternative": "tối đa 8 TC",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "58c90fec-8a98-5a2c-83b0-45889b4dce51",
+        "c9e354ef-bc9e-5553-b06e-55c8b019c678",
+        "eb518525-a03a-526b-8659-8b64a6629b85"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D23",
+      "evidence_groups": [
+        [
+          "03 đợt"
+        ],
+        [
+          "cuối mỗi học kỳ chính"
+        ],
+        [
+          "cuối học kỳ hè"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "03 đợt"
+          ],
+          "matched_alternative": "03 đợt",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "cuối mỗi học kỳ chính"
+          ],
+          "matched_alternative": "cuối mỗi học kỳ chính",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "cuối học kỳ hè"
+          ],
+          "matched_alternative": "cuối học kỳ hè",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "07423e56-f2dc-543e-b34a-283aa2a5433b",
+        "a3f7e4b0-4198-5ef7-9173-db17ba4dc505",
+        "fd3f039f-0500-51fe-81a3-a2a7d70f5ad3"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D24",
+      "evidence_groups": [
+        [
+          "03 đợt"
+        ],
+        [
+          "cuối mỗi học kỳ chính"
+        ],
+        [
+          "cuối học kỳ hè"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "03 đợt"
+          ],
+          "matched_alternative": "03 đợt",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "cuối mỗi học kỳ chính"
+          ],
+          "matched_alternative": "cuối mỗi học kỳ chính",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "cuối học kỳ hè"
+          ],
+          "matched_alternative": "cuối học kỳ hè",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "07423e56-f2dc-543e-b34a-283aa2a5433b",
+        "a3f7e4b0-4198-5ef7-9173-db17ba4dc505",
+        "fd3f039f-0500-51fe-81a3-a2a7d70f5ad3"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D25",
+      "evidence_groups": [
+        [
+          "03 tháng"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "03 tháng"
+          ],
+          "matched_alternative": "03 tháng",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "73239671-087a-52e5-9435-d9ee6bdabb28",
+        "986ae629-4db3-583f-b065-44d8c01ec2b7"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D26",
+      "evidence_groups": [
+        [
+          "03 tháng"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "03 tháng"
+          ],
+          "matched_alternative": "03 tháng",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "73239671-087a-52e5-9435-d9ee6bdabb28",
+        "986ae629-4db3-583f-b065-44d8c01ec2b7"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D27",
+      "evidence_groups": [
+        [
+          "Khoa học máy tính"
+        ],
+        [
+          "630"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Khoa học máy tính"
+          ],
+          "matched_alternative": "Khoa học máy tính",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "630"
+          ],
+          "matched_alternative": "630",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 8,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "68a988d9-c2b6-5b1c-999c-6313118ee0ce",
+        "a270dfd0-1311-5bdd-9d9f-d24053e8a92d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D28",
+      "evidence_groups": [
+        [
+          "Khoa học máy tính"
+        ],
+        [
+          "630"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Khoa học máy tính"
+          ],
+          "matched_alternative": "Khoa học máy tính",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "630"
+          ],
+          "matched_alternative": "630",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 8,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "68a988d9-c2b6-5b1c-999c-6313118ee0ce",
+        "a270dfd0-1311-5bdd-9d9f-d24053e8a92d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D29",
+      "evidence_groups": [
+        [
+          "Tài chính"
+        ],
+        [
+          "ngân hàng"
+        ],
+        [
+          "600"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Tài chính"
+          ],
+          "matched_alternative": "Tài chính",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "ngân hàng"
+          ],
+          "matched_alternative": "ngân hàng",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "600"
+          ],
+          "matched_alternative": "600",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 106,
+      "matched_documents": [
+        "RAW-HUCE-1124-quy-dinh-ve-che-do",
+        "RAW-HUCE-25-ke-hoach-nhiem-ky-202",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "45c97493-aa49-5185-ace0-04a7673b14d4",
+        "68a988d9-c2b6-5b1c-999c-6313118ee0ce",
+        "9beb1601-3a8e-5127-8bc6-41a576496a91",
+        "a270dfd0-1311-5bdd-9d9f-d24053e8a92d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D30",
+      "evidence_groups": [
+        [
+          "Tài chính"
+        ],
+        [
+          "Ngân hàng"
+        ],
+        [
+          "600"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Tài chính"
+          ],
+          "matched_alternative": "Tài chính",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Ngân hàng"
+          ],
+          "matched_alternative": "Ngân hàng",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "600"
+          ],
+          "matched_alternative": "600",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 106,
+      "matched_documents": [
+        "RAW-HUCE-1124-quy-dinh-ve-che-do",
+        "RAW-HUCE-25-ke-hoach-nhiem-ky-202",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "45c97493-aa49-5185-ace0-04a7673b14d4",
+        "68a988d9-c2b6-5b1c-999c-6313118ee0ce",
+        "9beb1601-3a8e-5127-8bc6-41a576496a91",
+        "a270dfd0-1311-5bdd-9d9f-d24053e8a92d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D31",
+      "evidence_groups": [
+        [
+          "KT hóa học",
+          "Kỹ thuật hóa học"
+        ],
+        [
+          "550"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "KT hóa học",
+            "Kỹ thuật hóa học"
+          ],
+          "matched_alternative": "KT hóa học",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "550"
+          ],
+          "matched_alternative": "550",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 11,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "68a988d9-c2b6-5b1c-999c-6313118ee0ce",
+        "a270dfd0-1311-5bdd-9d9f-d24053e8a92d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D32",
+      "evidence_groups": [
+        [
+          "KT hóa học",
+          "Kỹ thuật hóa học"
+        ],
+        [
+          "550"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "KT hóa học",
+            "Kỹ thuật hóa học"
+          ],
+          "matched_alternative": "KT hóa học",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "550"
+          ],
+          "matched_alternative": "550",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 11,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "68a988d9-c2b6-5b1c-999c-6313118ee0ce",
+        "a270dfd0-1311-5bdd-9d9f-d24053e8a92d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D33",
+      "evidence_groups": [
+        [
+          "Thạc sĩ (các ngành kỹ thuật, công nghệ): 720.000 đồng/TCHP",
+          "720.000 đồng/TCHP"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Thạc sĩ (các ngành kỹ thuật, công nghệ): 720.000 đồng/TCHP",
+            "720.000 đồng/TCHP"
+          ],
+          "matched_alternative": "Thạc sĩ (các ngành kỹ thuật, công nghệ): 720.000 đồng/TCHP",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D34",
+      "evidence_groups": [
+        [
+          "720.000 đồng/TCHP"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "720.000 đồng/TCHP"
+          ],
+          "matched_alternative": "720.000 đồng/TCHP",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D35",
+      "evidence_groups": [
+        [
+          "Thạc sĩ (các ngành kinh tế): 780.000 đồng/TCHP",
+          "780.000 đồng/TCHP"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Thạc sĩ (các ngành kinh tế): 780.000 đồng/TCHP",
+            "780.000 đồng/TCHP"
+          ],
+          "matched_alternative": "Thạc sĩ (các ngành kinh tế): 780.000 đồng/TCHP",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D36",
+      "evidence_groups": [
+        [
+          "780.000 đồng/TCHP"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "780.000 đồng/TCHP"
+          ],
+          "matched_alternative": "780.000 đồng/TCHP",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D37",
+      "evidence_groups": [
+        [
+          "Tiến sĩ: 26 triệu đồng/năm",
+          "26 triệu đồng/năm"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Tiến sĩ: 26 triệu đồng/năm",
+            "26 triệu đồng/năm"
+          ],
+          "matched_alternative": "Tiến sĩ: 26 triệu đồng/năm",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D38",
+      "evidence_groups": [
+        [
+          "26 triệu đồng/năm"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "26 triệu đồng/năm"
+          ],
+          "matched_alternative": "26 triệu đồng/năm",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D39",
+      "evidence_groups": [
+        [
+          "Đạt chứng chỉ trình độ tối thiểu Bậc 3",
+          "tối thiểu Bậc 3"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Đạt chứng chỉ trình độ tối thiểu Bậc 3",
+            "tối thiểu Bậc 3"
+          ],
+          "matched_alternative": "Đạt chứng chỉ trình độ tối thiểu Bậc 3",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "bd08c27f-c7e9-5896-9dcd-72e0f0c96296"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D40",
+      "evidence_groups": [
+        [
+          "Đạt chứng chỉ trình độ tối thiểu Bậc 3",
+          "tối thiểu Bậc 3"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Đạt chứng chỉ trình độ tối thiểu Bậc 3",
+            "tối thiểu Bậc 3"
+          ],
+          "matched_alternative": "Đạt chứng chỉ trình độ tối thiểu Bậc 3",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "bd08c27f-c7e9-5896-9dcd-72e0f0c96296"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D41",
+      "evidence_groups": [
+        [
+          "nghiệp cử nhân"
+        ],
+        [
+          "tối thiểu DELF B1"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "nghiệp cử nhân"
+          ],
+          "matched_alternative": "nghiệp cử nhân",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tối thiểu DELF B1"
+          ],
+          "matched_alternative": "tối thiểu DELF B1",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 9,
+      "matched_documents": [
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "6d4e3f57-7263-56ea-bc93-33b33655c536",
+        "db963feb-63c1-5828-a8c3-d31c2666e728"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D42",
+      "evidence_groups": [
+        [
+          "tối thiểu DELF B1"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "tối thiểu DELF B1"
+          ],
+          "matched_alternative": "tối thiểu DELF B1",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "6d4e3f57-7263-56ea-bc93-33b33655c536",
+        "db963feb-63c1-5828-a8c3-d31c2666e728"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D43",
+      "evidence_groups": [
+        [
+          "tối thiểu DELF B2"
+        ],
+        [
+          "tiếng Anh"
+        ],
+        [
+          "Bậc 4"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "tối thiểu DELF B2"
+          ],
+          "matched_alternative": "tối thiểu DELF B2",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tiếng Anh"
+          ],
+          "matched_alternative": "tiếng Anh",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Bậc 4"
+          ],
+          "matched_alternative": "Bậc 4",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 100,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "084fe1ef-9bb8-58db-8472-c8f132c710ac",
+        "0d182d03-e362-5d45-91a0-f2c1fec9f2ca",
+        "15faeda5-2dc6-5654-8bbf-150410d865d6",
+        "1ebb2076-a7f4-5355-8336-146b77235137",
+        "21eb6028-1589-52ac-8f7f-fd564551e9c3",
+        "24f6d3cb-82be-5eee-89fc-fcd5f8c8dedc",
+        "475487d1-10b2-55e9-a522-4430b3eb7703",
+        "52496cb4-701d-5081-afe1-c8e1d5e17865",
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e",
+        "5b25b7c8-8e29-59d0-aa35-77f0398000ed",
+        "5e5d1d09-64dc-5f9a-ae43-10cd472cad2e",
+        "5fb44f63-91d1-591f-84bb-7bdd36e121a2",
+        "6d4e3f57-7263-56ea-bc93-33b33655c536",
+        "7245e11e-e49e-589f-9b82-7c8d82453539",
+        "752aff13-ef10-5293-ad7a-101108fc205b",
+        "7d753d96-8763-52a2-a97e-90e4836d0c8b",
+        "7e2504e2-e57a-59d2-8057-b28544fc9aba",
+        "7e27d76d-0a1e-529d-a86c-87e8fbf42849",
+        "97db347d-73ca-5003-b0f5-551d2ae4108c",
+        "9e7ab697-89e7-5964-b99e-f126b9cdd4b5",
+        "a30bc981-f25f-5d4f-a83c-2fe385ee080b",
+        "b76218e4-579f-5cfe-ab3a-1b54c8be2b7d",
+        "b8cbd7cf-f4fb-5ddd-a17e-eabe460461f0",
+        "bd08c27f-c7e9-5896-9dcd-72e0f0c96296",
+        "c04f20d7-396f-5d29-a11a-c15a92ca09d4",
+        "c14b30db-26ee-59aa-84cb-cd6b7984539d",
+        "c3d5fb57-5e60-548a-acd2-6b8f6a6cd74e",
+        "c4162c81-64c6-50fc-886d-3216ec7387ae",
+        "d5500d74-49c0-55bf-ab13-269e0951fa77",
+        "db786df3-ad2d-5779-84d7-f2878c6d1ecb",
+        "db963feb-63c1-5828-a8c3-d31c2666e728",
+        "df92faad-aa9d-54cb-9c03-bdfd71a7a1a8",
+        "e8ee9b63-7662-548d-b45f-47122e234da7",
+        "fe6f0bcc-b895-5e46-9fa2-d6f1b3960e41",
+        "feb9d1c6-a98c-57d6-bd3a-3a45a44832f4",
+        "ffff077e-9641-5407-ae0c-a1feedc643b8"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D44",
+      "evidence_groups": [
+        [
+          "DELF B2"
+        ],
+        [
+          "tiếng Anh"
+        ],
+        [
+          "Bậc 4"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "DELF B2"
+          ],
+          "matched_alternative": "DELF B2",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tiếng Anh"
+          ],
+          "matched_alternative": "tiếng Anh",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Bậc 4"
+          ],
+          "matched_alternative": "Bậc 4",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 101,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "084fe1ef-9bb8-58db-8472-c8f132c710ac",
+        "0d182d03-e362-5d45-91a0-f2c1fec9f2ca",
+        "15faeda5-2dc6-5654-8bbf-150410d865d6",
+        "1ebb2076-a7f4-5355-8336-146b77235137",
+        "21eb6028-1589-52ac-8f7f-fd564551e9c3",
+        "24f6d3cb-82be-5eee-89fc-fcd5f8c8dedc",
+        "475487d1-10b2-55e9-a522-4430b3eb7703",
+        "52496cb4-701d-5081-afe1-c8e1d5e17865",
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e",
+        "5b25b7c8-8e29-59d0-aa35-77f0398000ed",
+        "5e5d1d09-64dc-5f9a-ae43-10cd472cad2e",
+        "5fb44f63-91d1-591f-84bb-7bdd36e121a2",
+        "6d4e3f57-7263-56ea-bc93-33b33655c536",
+        "7245e11e-e49e-589f-9b82-7c8d82453539",
+        "752aff13-ef10-5293-ad7a-101108fc205b",
+        "7d753d96-8763-52a2-a97e-90e4836d0c8b",
+        "7e2504e2-e57a-59d2-8057-b28544fc9aba",
+        "7e27d76d-0a1e-529d-a86c-87e8fbf42849",
+        "97db347d-73ca-5003-b0f5-551d2ae4108c",
+        "9e7ab697-89e7-5964-b99e-f126b9cdd4b5",
+        "a30bc981-f25f-5d4f-a83c-2fe385ee080b",
+        "b76218e4-579f-5cfe-ab3a-1b54c8be2b7d",
+        "b8cbd7cf-f4fb-5ddd-a17e-eabe460461f0",
+        "bd08c27f-c7e9-5896-9dcd-72e0f0c96296",
+        "c04f20d7-396f-5d29-a11a-c15a92ca09d4",
+        "c14b30db-26ee-59aa-84cb-cd6b7984539d",
+        "c3d5fb57-5e60-548a-acd2-6b8f6a6cd74e",
+        "c4162c81-64c6-50fc-886d-3216ec7387ae",
+        "d5500d74-49c0-55bf-ab13-269e0951fa77",
+        "db786df3-ad2d-5779-84d7-f2878c6d1ecb",
+        "db963feb-63c1-5828-a8c3-d31c2666e728",
+        "df92faad-aa9d-54cb-9c03-bdfd71a7a1a8",
+        "e8ee9b63-7662-548d-b45f-47122e234da7",
+        "fe6f0bcc-b895-5e46-9fa2-d6f1b3960e41",
+        "feb9d1c6-a98c-57d6-bd3a-3a45a44832f4",
+        "ffff077e-9641-5407-ae0c-a1feedc643b8"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D45",
+      "evidence_groups": [
+        [
+          "Goethe-Zertifikat trình độ tối thiểu B1"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Goethe-Zertifikat trình độ tối thiểu B1"
+          ],
+          "matched_alternative": "Goethe-Zertifikat trình độ tối thiểu B1",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "b7ebae1b-a2ef-5429-a70c-976a6897b23e",
+        "db963feb-63c1-5828-a8c3-d31c2666e728"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D46",
+      "evidence_groups": [
+        [
+          "Goethe-Zertifikat trình độ tối thiểu B1"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Goethe-Zertifikat trình độ tối thiểu B1"
+          ],
+          "matched_alternative": "Goethe-Zertifikat trình độ tối thiểu B1",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "b7ebae1b-a2ef-5429-a70c-976a6897b23e",
+        "db963feb-63c1-5828-a8c3-d31c2666e728"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D47",
+      "evidence_groups": [
+        [
+          "Công nghệ thông tin Việt - Nhật"
+        ],
+        [
+          "Đạt chứng chỉ tiếng Nhật từ N3"
+        ],
+        [
+          "JP1110, JP1120, JP1132, JP2111"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Công nghệ thông tin Việt - Nhật"
+          ],
+          "matched_alternative": "Công nghệ thông tin Việt - Nhật",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Đạt chứng chỉ tiếng Nhật từ N3"
+          ],
+          "matched_alternative": "Đạt chứng chỉ tiếng Nhật từ N3",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "JP1110, JP1120, JP1132, JP2111"
+          ],
+          "matched_alternative": "JP1110, JP1120, JP1132, JP2111",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e",
+        "bb7921de-5a7a-5245-b24b-4a509651a669"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D48",
+      "evidence_groups": [
+        [
+          "Công nghệ thông tin Việt - Nhật"
+        ],
+        [
+          "tiếng Nhật từ N3"
+        ],
+        [
+          "JP1110, JP1120, JP1132, JP2111"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "Công nghệ thông tin Việt - Nhật"
+          ],
+          "matched_alternative": "Công nghệ thông tin Việt - Nhật",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "tiếng Nhật từ N3"
+          ],
+          "matched_alternative": "tiếng Nhật từ N3",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "JP1110, JP1120, JP1132, JP2111"
+          ],
+          "matched_alternative": "JP1110, JP1120, JP1132, JP2111",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 4,
+      "matched_documents": [
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e",
+        "bb7921de-5a7a-5245-b24b-4a509651a669"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D49",
+      "evidence_groups": [
+        [
+          "JLPT N5 N4 N3 N2 N1"
+        ],
+        [
+          "Bậc 2 Bậc 3 Bậc 4 Bậc 5 Bậc 6"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "JLPT N5 N4 N3 N2 N1"
+          ],
+          "matched_alternative": "JLPT N5 N4 N3 N2 N1",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Bậc 2 Bậc 3 Bậc 4 Bậc 5 Bậc 6"
+          ],
+          "matched_alternative": "Bậc 2 Bậc 3 Bậc 4 Bậc 5 Bậc 6",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "475487d1-10b2-55e9-a522-4430b3eb7703",
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "D50",
+      "evidence_groups": [
+        [
+          "JLPT N5 N4 N3 N2 N1"
+        ],
+        [
+          "Bậc 2 Bậc 3 Bậc 4 Bậc 5 Bậc 6"
+        ]
+      ],
+      "group_results": [
+        {
+          "alternatives": [
+            "JLPT N5 N4 N3 N2 N1"
+          ],
+          "matched_alternative": "JLPT N5 N4 N3 N2 N1",
+          "expected_document_present": true
+        },
+        {
+          "alternatives": [
+            "Bậc 2 Bậc 3 Bậc 4 Bậc 5 Bậc 6"
+          ],
+          "matched_alternative": "Bậc 2 Bậc 3 Bậc 4 Bậc 5 Bậc 6",
+          "expected_document_present": true
+        }
+      ],
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "475487d1-10b2-55e9-a522-4430b3eb7703",
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e"
+      ],
+      "labelled_chunk_ids_current": false
+    }
+  ]
+}

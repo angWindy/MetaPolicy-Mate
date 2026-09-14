@@ -1,0 +1,7 @@
+.section { padding: 8px 0 22px; }
+.copy { max-width: 680px; }
+.context { margin: 0 0 16px; color: var(--color-primary); font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+.title { margin: 0; color: var(--color-text); font-size: clamp(34px, 4vw, 56px); font-weight: 760; letter-spacing: -.05em; line-height: 1.03; }
+.title span { color: var(--color-primary); }
+.supportingText { max-width: 590px; margin: 20px 0 0; color: var(--color-text-muted); font-size: 15px; line-height: 1.65; }
+@media (max-width: 700px) { .section { padding-top: 0; }.context { margin-bottom: 12px; }.title { font-size: clamp(30px, 8.6vw, 38px); letter-spacing: -.04em; }.supportingText { margin-top: 16px; font-size: 14px; } }

@@ -1,0 +1,106 @@
+name: Backend CI
+
+on:
+  push:
+    branches: [main, develop, demo]
+  pull_request:
+    branches: [main, develop, demo]
+
+concurrency:
+  group: backend-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint:
+    name: Ruff lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install ruff
+        run: pip install ruff==0.6.9
+
+      - name: Lint src/
+        run: ruff check src/ scripts/
+
+      - name: Lint tests/
+        run: ruff check tests/
+
+  unit-tests:
+    name: Unit tests
+    runs-on: ubuntu-latest
+    needs: lint
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: p234
+          POSTGRES_PASSWORD: p234
+          POSTGRES_DB: p234_test
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U p234"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+      redis:
+        image: redis:7
+        ports: ["6379:6379"]
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      APP_ENV: test
+      TENANT_DATABASE_URL: postgresql+psycopg://p234:p234@localhost:5432/p234_test
+      REDIS_URL: redis://localhost:6379/0
+      JWT_SECRET: ci-test-secret-please-change
+      OPENAI_API_KEY: test-key
+      ANTHROPIC_API_KEY: test-key
+      GOOGLE_API_KEY: test-key
+      MISTRAL_API_KEY: test-key
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install -r requirements-dev.txt
+
+      - name: Run migrations
+        run: |
+          alembic upgrade head
+
+      - name: Run unit tests
+        run: |
+          pytest tests/ -v --tb=short \
+            --ignore=tests/_local \
+            --ignore=tests/test_evaluation \
+            -m "not requires_rag_runtime" \
+            -x
+
+  docker-build:
+    name: Backend Docker image build
+    runs-on: ubuntu-latest
+    needs: [lint, unit-tests]
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build backend production image (slim)
+        run: docker buildx build --tag p234-backend:ci --load -f Dockerfile.server .

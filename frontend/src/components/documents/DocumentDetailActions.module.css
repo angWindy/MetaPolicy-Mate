@@ -1,0 +1,71 @@
+.wrapper {
+  margin-top: 20px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actions a,
+.actions button {
+  display: inline-flex;
+  min-height: 40px;
+  cursor: pointer;
+  align-items: center;
+  padding: 9px 12px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-control, 10px);
+  background: var(--color-card, #fff);
+  color: var(--color-text, #0f172a);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.actions a:hover,
+.actions button:hover {
+  border-color: var(--color-primary, #2563eb);
+  color: var(--color-primary, #2563eb);
+}
+
+.actions .primary {
+  border-color: var(--color-primary, #2563eb);
+  background: var(--color-primary, #2563eb);
+  color: #fff;
+}
+
+.actions .primary:hover {
+  background: var(--color-primary-hover, #1d4ed8);
+  color: #fff;
+}
+
+.actions a:focus-visible,
+.actions button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary, #2563eb) 35%, white);
+  outline-offset: 2px;
+}
+
+.wrapper p {
+  margin: 9px 0 0;
+  color: var(--color-text-muted, #64748b);
+  font-size: 11px;
+}
+
+.wrapper p.error {
+  color: var(--color-error, #dc2626);
+}
+
+.actions button[aria-pressed="true"] {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, white);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+@media (max-width: 520px) {
+  .actions { display: grid; grid-template-columns: 1fr; }
+  .actions a, .actions button { justify-content: center; width: 100%; }
+}
+

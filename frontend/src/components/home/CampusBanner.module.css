@@ -1,0 +1,16 @@
+.banner { position: relative; isolation: isolate; min-height: 330px; overflow: hidden; margin-top: 36px; border-radius: 14px; background: #1b2028; color: #fff; box-shadow: 0 20px 48px rgb(70 18 24 / 18%); }
+.image { z-index: -2; object-fit: cover; object-position: 50% 56%; filter: saturate(.82) contrast(1.03); animation: campus-drift 18s cubic-bezier(.45, 0, .55, 1) infinite alternate; transform-origin: 52% 56%; will-change: transform; }
+.veil { position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, rgb(17 24 39 / 96%) 0%, rgb(17 24 39 / 84%) 38%, rgb(70 24 29 / 42%) 72%, rgb(74 21 26 / 26%) 100%); }
+.content { max-width: 650px; padding: clamp(30px, 4vw, 52px); }
+.content > p { margin: 0 0 16px; color: #ff858a; font-size: 11px; font-weight: 760; letter-spacing: .09em; text-transform: uppercase; }
+.content h2 { max-width: 590px; margin: 0; font-size: clamp(30px, 3.5vw, 48px); letter-spacing: -.04em; line-height: 1.06; text-shadow: 0 3px 18px rgb(0 0 0 / 35%); }
+.content > span { display: block; max-width: 560px; margin-top: 17px; color: rgb(255 255 255 / 88%); font-size: 14px; line-height: 1.65; text-shadow: 0 2px 10px rgb(0 0 0 / 34%); }
+.content > a { display: inline-flex; min-height: 44px; align-items: center; gap: 8px; margin-top: 22px; padding: 0 16px; border-radius: 8px; background: #fff; color: var(--color-primary); font-size: 12px; font-weight: 750; text-decoration: none; }
+.content > a:hover { background: #fff1f2; }
+.qualities { display: flex; position: absolute; right: 24px; bottom: 22px; align-items: center; margin: 0; padding: 13px 10px; border: 1px solid rgb(255 255 255 / 18%); border-radius: 11px; background: rgb(12 17 24 / 68%); box-shadow: 0 12px 28px rgb(0 0 0 / 24%); backdrop-filter: blur(10px); list-style: none; }
+.qualities li { display: flex; min-height: 28px; align-items: center; gap: 9px; padding: 0 16px; border-left: 1px solid rgb(255 255 255 / 24%); color: #fff; font-size: 13px; font-weight: 650; text-shadow: 0 2px 8px rgb(0 0 0 / 48%); }
+.qualities li:first-child { border-left: 0; }.qualities svg { width: 20px; height: 20px; color: #ff6b72; filter: drop-shadow(0 2px 5px rgb(0 0 0 / 32%)); stroke-width: 2.2; }
+@media (max-width: 1100px) { .banner { min-height: 380px; }.qualities { right: auto; bottom: 22px; left: clamp(24px, 4vw, 52px); }.qualities li { padding-inline: 13px; }.qualities li:first-child { padding-left: 6px; } }
+@media (max-width: 700px) { .banner { min-height: 480px; margin-top: 30px; }.image { object-position: 62% 50%; }.veil { background: linear-gradient(180deg, rgb(17 24 39 / 94%) 0%, rgb(17 24 39 / 78%) 58%, rgb(67 21 26 / 66%) 100%); }.content { padding: 28px 22px; }.content h2 { font-size: clamp(29px, 9vw, 40px); }.content > span { font-size: 13px; }.qualities { right: 18px; bottom: 18px; left: 18px; align-items: stretch; flex-direction: column; gap: 5px; padding: 11px 14px; }.qualities li { min-height: 32px; padding: 0; border-left: 0; font-size: 12px; } }
+@keyframes campus-drift { to { transform: scale(1.04) translate3d(-.3%, -.2%, 0); } }
+@media (prefers-reduced-motion: reduce) { .image { animation: none; } }

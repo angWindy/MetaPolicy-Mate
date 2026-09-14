@@ -1,0 +1,63 @@
+.state {
+  display: flex;
+  min-height: 220px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 36px 24px;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-card, 18px);
+  background: #fffafa;
+  text-align: center;
+}
+
+.icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: #fee2e2;
+  color: var(--color-error, #dc2626);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.state h2 {
+  margin: 14px 0 0;
+  color: var(--color-text, #0f172a);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.state p {
+  max-width: 480px;
+  margin: 7px 0 0;
+  color: var(--color-text-muted, #64748b);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.state button {
+  min-height: 40px;
+  margin-top: 16px;
+  cursor: pointer;
+  padding: 8px 14px;
+  border: 1px solid var(--color-primary, #2563eb);
+  border-radius: var(--radius-control, 10px);
+  background: var(--color-primary, #2563eb);
+  color: #fff;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.state button:hover {
+  background: var(--color-primary-hover, #1d4ed8);
+}
+
+.state button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary, #2563eb) 35%, white);
+  outline-offset: 2px;
+}
+

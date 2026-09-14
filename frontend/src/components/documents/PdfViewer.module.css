@@ -1,0 +1,97 @@
+.wrapper {
+  margin-top: 18px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: var(--radius-card, 18px);
+  background: var(--color-card, #fff);
+  box-shadow: var(--shadow-card, 0 8px 24px rgb(15 23 42 / 6%));
+  overflow: hidden;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-border, #e2e8f0);
+  background: var(--color-card-soft, #f8fafc);
+  font-size: 13px;
+}
+
+.zoomControls {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.zoomControls button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  background: var(--color-card, #fff);
+  cursor: pointer;
+  color: var(--color-text, #0f172a);
+}
+
+.zoomControls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.zoomControls span {
+  min-width: 44px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--color-text, #0f172a);
+}
+
+.toolbarLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-primary, #2563eb);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.toolbarLink:hover {
+  text-decoration: underline;
+}
+
+.frame {
+  height: 720px;
+  overflow: auto;
+  background: #f1f5f9;
+}
+
+.iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #f1f5f9;
+}
+
+.tokenFallback {
+  padding: 10px 16px 16px;
+  border-top: 1px solid var(--color-border, #e2e8f0);
+  font-size: 12px;
+  color: var(--color-text-muted, #64748b);
+}
+
+.tokenFallback summary {
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.tokenFallback input {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  font: inherit;
+}

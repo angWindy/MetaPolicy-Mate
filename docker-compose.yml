@@ -1,0 +1,65 @@
+version: "3.8"
+
+# Cloud-first stack: backend in container, Qdrant + Postgres are remote.
+# Run with:
+#   docker compose -f docker-compose.cloud.yml up -d --build
+services:
+  redis:
+    image: redis:8-alpine
+    container_name: p234-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: p234-backend:latest
+    container_name: p234-backend
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+      - .env.rag
+    environment:
+      # Qdrant Cloud + Neon Postgres are reached over the public internet,
+      # so no Docker-internal override is needed for those two.
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    depends_on:
+      redis:
+        condition: service_healthy
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: p234-frontend:latest
+    container_name: p234-frontend
+    ports:
+      - "3000:3000"
+    environment:
+      - NEXT_PUBLIC_API_URL=https://p234.duckdns.org
+      - NEXT_PUBLIC_USE_MOCK_DATA=false
+      - NODE_ENV=production
+    restart: unless-stopped
+    depends_on:
+      - backend
+
+volumes:
+  redis-data:

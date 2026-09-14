@@ -1,0 +1,38 @@
+{
+  "collection": "p234_qdrant",
+  "postgres_count": 2369,
+  "qdrant_count": 2410,
+  "missing_count": 0,
+  "stale_count": 41,
+  "invalid_payload_count": 0,
+  "content_hash_mismatch_count": 0,
+  "samples": {
+    "missing_ids": [],
+    "stale_ids": [
+      "111f4e3a-3a1d-5911-bf65-31063396bc15",
+      "150cbe26-e89c-55b9-b52c-2e6422950651",
+      "2a364fa1-a68c-598e-adf4-b207c7344236",
+      "2c3957fb-eecc-587a-9e98-92fafd00bd7d",
+      "321142b1-2940-5dbe-9bed-a519e697da0d",
+      "33cb549e-da90-56b3-8849-8f0033fed1c8",
+      "36d56835-10b5-578e-985b-ee5d7ea51242",
+      "3a32e835-7ede-5f18-b330-44ddae1fdfdd",
+      "3b9eeda3-134f-5864-93f2-38fdebb01f22",
+      "3c2ea53d-9c7c-586a-b443-9a6ab0078e4d",
+      "43d24cd0-cdb4-5f92-a447-ad6073f81b17",
+      "466b2ad9-18fb-57f9-8b9b-b445bce2b0ed",
+      "4b4280fc-b0bd-5872-8a94-cb6569229a2d",
+      "4ea29807-b24b-5119-b53e-5197b3b0ee1d",
+      "5006b016-850d-5941-a30c-c18bb4e4a0c5",
+      "52a6db2f-b8f5-5858-abb6-a2ddb910b734",
+      "5403c34f-f3ae-5477-9a30-bc2ff60adbd0",
+      "556725fc-e357-5ded-a8a4-d8ac68ab3197",
+      "5762f83a-ab94-5fca-8175-779828b792fb",
+      "600a2566-020b-5adf-bcca-2dea79257efa"
+    ],
+    "invalid_payload_ids": [],
+    "content_hash_mismatch_ids": []
+  },
+  "aligned": false,
+  "repaired_count": null
+}

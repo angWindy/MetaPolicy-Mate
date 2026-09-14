@@ -1,0 +1,18 @@
+{
+  "dataset": "eval\\datasets\\golden_questions.example.jsonl",
+  "dataset_valid": false,
+  "status": "INSUFFICIENT_DATA",
+  "metrics": {},
+  "by_category": {},
+  "variants": {},
+  "failures": [
+    "Invalid golden row 1: 8 validation errors for GoldenCase\nquery\n  Field required [type=missing, input_value={'question': 'Thời hạ...ata owner xác nhận.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nuser_context\n  Field required [type=missing, input_value={'question': 'Thời hạ...ata owner xác nhận.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nreference_answer\n  Field required [type=missing, input_value={'question': 'Thời hạ...ata owner xác nhận.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nexpected_status\n  Field required [type=missing, input_value={'question': 'Thời hạ...ata owner xác nhận.'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.13/v/missing\nquestion\n  Extra inputs are not permitted [type=extra_forbidden, input_value='Thời hạn xử lý hồ sơ là bao lâu?', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden\ndepartment\n  Extra inputs are not permitted [type=extra_forbidden, input_value='PUBLIC', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden\nroles\n  Extra inputs are not permitted [type=extra_forbidden, input_value=['staff'], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden\nreference\n  Extra inputs are not permitted [type=extra_forbidden, input_value='Thay bằng câu trả l...data owner xác nhận.', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/extra_forbidden"
+  ],
+  "gate": {
+    "status": "INSUFFICIENT_DATA",
+    "missing_metrics": [
+      "golden_labels",
+      "runner_observations"
+    ]
+  }
+}

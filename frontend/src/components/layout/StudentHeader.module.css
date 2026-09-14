@@ -1,0 +1,82 @@
+.header { box-sizing: border-box; display: flex; position: sticky; z-index: 20; top: 12px; min-height: 62px; align-items: center; justify-content: space-between; gap: 16px; padding: 8px 12px 8px 20px; border: 1px solid #e5e9f0; border-radius: 12px; background: rgb(255 255 255 / 94%); box-shadow: 0 5px 18px rgb(15 23 42 / 4%); backdrop-filter: blur(14px); }
+.studentHeader { top: 0; min-height: 72px; padding: 0 clamp(20px, 4vw, 64px); border-width: 0 0 1px; border-radius: 0; box-shadow: none; }
+.titleGroup { display: flex; min-width: 0; flex: 0 1 auto; align-items: center; gap: 11px; }
+.breadcrumb { display: block; margin-bottom: 2px; color: var(--color-primary); font-size: 9px; font-weight: 760; letter-spacing: .1em; text-transform: uppercase; }
+.title { margin: 0; overflow: hidden; color: var(--color-text); font-size: 17px; font-weight: 700; letter-spacing: -.02em; text-overflow: ellipsis; white-space: nowrap; }
+.menuButton { display: none; width: 44px; height: 44px; flex: 0 0 44px; cursor: pointer; place-items: center; border: 1px solid var(--color-border); border-radius: 11px; background: #fff; color: var(--color-text-secondary); }
+.studentBrand { display: inline-flex; min-width: 44px; max-width: min(100%, 280px); flex: 0 1 auto; align-items: center; gap: 10px; padding: 4px 10px 4px 4px; border: 1px solid transparent; border-radius: 12px; color: var(--color-text); text-decoration: none; transition: background 150ms ease, border-color 150ms ease; }
+.studentBrand:hover { background: var(--color-surface-muted); }
+.brandIcon { display: grid; width: 36px; height: 36px; flex: 0 0 36px; place-items: center; border-radius: 9px; background: var(--color-primary); color: #fff; }
+.studentBrand.brandAdmin .brandIcon { background: var(--color-text); }
+.brandText { display: flex; min-width: 0; flex: 1 1 auto; flex-direction: column; line-height: 1.15; overflow: hidden; }
+.brandTitle { overflow: hidden; font-size: 16px; letter-spacing: -.03em; text-overflow: ellipsis; white-space: nowrap; }
+.brandTitle b { color: var(--color-primary); }
+.brandSub { display: block; overflow: hidden; font-size: 10px; color: var(--color-text-muted); letter-spacing: .02em; text-overflow: ellipsis; white-space: nowrap; }
+.studentBrand:focus-visible { outline: 3px solid color-mix(in srgb, var(--color-primary) 35%, transparent); outline-offset: 2px; }
+
+/* Collapse the brand caption to icon-only when the top bar runs out
+ * of room: admin pages always carry 8 nav links, narrower viewports
+ * lose the search bar, etc. The icon stays 44 px wide thanks to
+ * `min-width`, and the aria-label still describes the destination so
+ * the button stays usable when the decorative text disappears. */
+.adminShell .studentBrand { gap: 0; padding-right: 4px; }
+.adminShell .brandText { display: none; }
+@media (max-width: 1100px) {
+  .studentBrand { gap: 0; padding-right: 4px; }
+  .brandText { display: none; }
+}
+.primaryNav { display: flex; align-self: center; align-items: center; gap: 4px; flex-wrap: nowrap; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.primaryNav::-webkit-scrollbar { display: none; }
+.navLink { display: inline-flex; min-height: 40px; align-items: center; gap: 7px; padding: 0 14px; border-radius: 9px; color: var(--color-text-muted); font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap; transition: background 150ms ease, color 150ms ease; }
+.navLink:hover { background: var(--color-surface-muted); color: var(--color-text); }
+.navLink.activeNav { background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; }
+.navIcon { display: inline-grid; place-items: center; }
+.navIcon svg { stroke-width: 1.8; }
+.actions { display: flex; align-items: center; gap: 9px; }
+.search { display: flex; width: min(360px, 34vw); height: 40px; align-items: center; gap: 9px; padding: 0 9px 0 13px; border: 1px solid var(--color-border); border-radius: 9px; background: var(--color-surface-muted); color: var(--color-text-muted); transition: border-color 150ms ease, box-shadow 150ms ease, background 150ms ease; }
+.search:focus-within { border-color: color-mix(in srgb, var(--color-primary) 45%, white); background: #fff; box-shadow: var(--focus-ring); }
+.search input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--color-text); font-size: 13px; }
+.search kbd { padding: 3px 6px; border: 1px solid var(--color-border); border-radius: 6px; background: #fff; color: var(--color-text-subtle); font-family: inherit; font-size: 10px; white-space: nowrap; }
+.notificationButton { display: grid; position: relative; width: 44px; height: 44px; cursor: pointer; place-items: center; border: 1px solid var(--color-border); border-radius: 11px; background: #fff; color: var(--color-text-secondary); text-decoration: none; }
+.notificationButton:hover { border-color: color-mix(in srgb, var(--color-primary) 25%, white); background: var(--color-primary-soft); color: var(--color-primary); }
+.notificationButton.activeUtility { border-color: color-mix(in srgb, var(--color-primary) 30%, white); background: var(--color-primary-soft); color: var(--color-primary); }
+.badge { display: grid; position: absolute; top: -5px; right: -5px; min-width: 18px; height: 18px; place-items: center; padding: 0 4px; border: 2px solid #fff; border-radius: 999px; background: #ef4444; color: #fff; font-size: 9px; font-weight: 750; }
+.accountMenu { position: relative; }
+.accountMenu summary { display: flex; cursor: pointer; list-style: none; align-items: center; gap: 9px; padding: 3px 5px 3px 3px; border-radius: 12px; }
+.accountMenu summary { min-height: 44px; }
+.accountMenu summary::-webkit-details-marker { display: none; }
+.accountMenu summary:hover { background: var(--color-surface-muted); }
+.accountMenu.activeAccount summary { background: var(--color-primary-soft); color: var(--color-primary); }
+.avatar { display: grid; width: 38px; height: 38px; overflow: hidden; place-items: center; border-radius: 11px; background: var(--color-primary-soft); color: var(--color-primary); font-size: 11px; font-weight: 750; }
+.avatar img { width: 100%; height: 100%; object-fit: cover; transition: transform 600ms cubic-bezier(.22, 1, .36, 1); }
+.accountMenu summary:hover .avatar img { transform: scale(1.06); }
+.accountCopy { display: flex; max-width: 135px; flex-direction: column; gap: 1px; }
+.accountCopy strong, .accountCopy small { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.accountCopy strong { color: var(--color-text-secondary); font-size: 12px; }
+.accountCopy small { color: var(--color-text-muted); font-size: 10px; }
+.menuPanel { display: flex; position: absolute; z-index: 50; top: calc(100% + 10px); right: 0; width: 220px; flex-direction: column; padding: 8px; border: 1px solid var(--color-border); border-radius: 14px; background: #fff; box-shadow: var(--shadow-overlay); }
+.menuIdentity { display: flex; flex-direction: column; gap: 3px; padding: 10px; border-bottom: 1px solid var(--color-border); }
+.menuIdentity strong { font-size: 13px; }.menuIdentity span { color: var(--color-text-muted); font-size: 11px; }
+.menuPanel a { display:flex;align-items:center;gap:8px;padding: 10px; border-radius: 8px; color: var(--color-text-secondary); font-size: 13px; text-decoration: none; }.menuPanel a:hover { background: var(--color-surface-muted); color: var(--color-primary); }
+.menuPanel button { display: flex; min-height: 40px; cursor: pointer; align-items: center; gap: 8px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--color-error); font-size: 12px; text-align: left; }.menuPanel button:hover { background: var(--color-error-soft); }
+
+.drawerBackdrop { display: none; position: fixed; z-index: 35; inset: 0; cursor: pointer; border: 0; background: rgb(15 23 42 / 46%); backdrop-filter: blur(3px); }
+.mobileDrawer { display: none; }
+
+@media (max-width: 1450px) { .studentHeader .search { display: none; } }
+@media (max-width: 1100px) { .studentHeader .accountCopy, .studentHeader .accountMenu summary > svg { display: none; } }
+@media (max-width: 900px) {
+  .header { top: 0; border-width: 0 0 1px; border-radius: 0; }
+  .menuButton { display: grid; }
+  .primaryNav { display: none; }
+  .studentHeader { padding-inline: 20px; }
+  .drawerBackdrop { display: block; }
+  .mobileDrawer { display: block; position: fixed; z-index: 40; top: 72px; left: 0; width: min(86vw, 320px); max-height: calc(100dvh - 72px); padding: 12px; background: #fff; border-right: 1px solid var(--color-border); box-shadow: 14px 0 42px rgb(15 23 42 / 18%); transform: translateX(-100%); visibility: hidden; transition: transform 200ms ease, visibility 200ms; overflow-y: auto; }
+  .mobileDrawer.mobileDrawerOpen { transform: translateX(0); visibility: visible; }
+  .mobileDrawer nav { display: flex; flex-direction: column; gap: 4px; }
+  .drawerLink { display: flex; min-height: 46px; align-items: center; gap: 10px; padding: 0 14px; border-radius: 10px; color: var(--color-text-muted); font-size: 14px; font-weight: 580; text-decoration: none; }
+  .drawerLink:hover { background: var(--color-surface-muted); color: var(--color-text); }
+  .drawerLink.drawerLinkActive { background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; }
+}
+@media (max-width: 760px) { .search, .accountCopy, .accountMenu summary > svg { display: none; }.header { padding-inline: 16px; }.breadcrumb { display: none; } }
+@media (prefers-reduced-motion: reduce) { .avatar img { transition: none; }.accountMenu summary:hover .avatar img { transform: none; } .mobileDrawer { transition: none; } }

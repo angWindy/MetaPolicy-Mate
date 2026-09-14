@@ -1,0 +1,458 @@
+{
+  "cases": 7,
+  "retrieval_cases": 4,
+  "warmed_index_chunks": 6,
+  "recall_at_final_k": 1.0,
+  "hit_rate_at_final_k": 1.0,
+  "unauthorized_retrieval_rate": 0.0,
+  "retrieval_presence_accuracy": 1.0,
+  "abstention_candidate_empty_rate": 0.3333333333333333,
+  "mean_latency_ms": 38.50748571494478,
+  "details": [
+    {
+      "query": "Ai xem xét và phê duyệt đề nghị nghỉ phép?",
+      "expected_status": "sufficient",
+      "actual_status": "sufficient",
+      "retrieved_chunk_ids": [
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "retrieved_scores": {
+        "11111111-1111-4111-8111-111111111302": 0.928,
+        "11111111-1111-4111-8111-111111111303": 0.5954028525417573,
+        "11111111-1111-4111-8111-111111111301": 0.5340295686017054,
+        "22222222-2222-4222-8222-222222222301": 0.38125000000000003
+      },
+      "expected_chunk_ids": [
+        "11111111-1111-4111-8111-111111111302"
+      ],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 71.83290000102716,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "dense_chunk_ids": [
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "sparse_chunk_ids": [
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "bm25_chunk_ids": [
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "fused_chunk_ids": [
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "reranked_chunk_ids": [
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "latency_ms": {
+          "policy_filter": 16.15230000243173,
+          "embedding": 1.228500001161592,
+          "search": 14.051099999051075,
+          "fusion": 0.049799997213995084,
+          "rerank": 11.258599999564467,
+          "total": 71.70200000109617
+        },
+        "retrieved_scores": {
+          "11111111-1111-4111-8111-111111111302": 0.928,
+          "11111111-1111-4111-8111-111111111303": 0.5954028525417573,
+          "11111111-1111-4111-8111-111111111301": 0.5340295686017054,
+          "22222222-2222-4222-8222-222222222301": 0.38125000000000003
+        }
+      },
+      "pipeline": {
+        "evidence_status": "sufficient",
+        "evidence_action": "generate",
+        "citation_chunk_ids": [
+          "11111111-1111-4111-8111-111111111302"
+        ],
+        "unauthorized_citation_ids": [],
+        "confidence": "high",
+        "evidence_reason": "status=sufficient; top_score=0.88; score_gap=0.5435758909250282; independent_sources=2; citation_metadata=complete; versions=current; evidence meets the configured domain thresholds",
+        "latency_ms": 229.72759999902337
+      }
+    },
+    {
+      "query": "Đề nghị nghỉ phép phải gửi trước ít nhất bao nhiêu ngày làm việc?",
+      "expected_status": "sufficient",
+      "actual_status": "sufficient",
+      "retrieved_chunk_ids": [
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "retrieved_scores": {
+        "11111111-1111-4111-8111-111111111303": 0.9910000000000001,
+        "11111111-1111-4111-8111-111111111302": 0.5250014453118778,
+        "11111111-1111-4111-8111-111111111301": 0.4325653430453227,
+        "22222222-2222-4222-8222-222222222301": 0.2478125
+      },
+      "expected_chunk_ids": [
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 56.80980000033742,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "dense_chunk_ids": [
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "sparse_chunk_ids": [
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "bm25_chunk_ids": [
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111301"
+        ],
+        "fused_chunk_ids": [
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "reranked_chunk_ids": [
+          "11111111-1111-4111-8111-111111111303",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111301",
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "latency_ms": {
+          "policy_filter": 14.198400000168476,
+          "embedding": 0.7688999976380728,
+          "search": 7.638400002178969,
+          "fusion": 0.0486999997519888,
+          "rerank": 15.142500000365544,
+          "total": 56.66670000209706
+        },
+        "retrieved_scores": {
+          "11111111-1111-4111-8111-111111111303": 0.9910000000000001,
+          "11111111-1111-4111-8111-111111111302": 0.5250014453118778,
+          "11111111-1111-4111-8111-111111111301": 0.4325653430453227,
+          "22222222-2222-4222-8222-222222222301": 0.2478125
+        }
+      },
+      "pipeline": {
+        "evidence_status": "sufficient",
+        "evidence_action": "generate",
+        "citation_chunk_ids": [
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "unauthorized_citation_ids": [],
+        "confidence": "high",
+        "evidence_reason": "status=sufficient; top_score=0.9850000000000001; score_gap=0.7659115696414943; independent_sources=2; citation_metadata=complete; versions=current; evidence meets the configured domain thresholds",
+        "latency_ms": 151.88000000125612
+      }
+    },
+    {
+      "query": "EVAL-LEAVE-2026 quy định đối tượng nghỉ phép như thế nào?",
+      "expected_status": "sufficient",
+      "actual_status": "sufficient",
+      "retrieved_chunk_ids": [
+        "11111111-1111-4111-8111-111111111301",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "retrieved_scores": {
+        "11111111-1111-4111-8111-111111111301": 0.95375,
+        "11111111-1111-4111-8111-111111111302": 0.8229346835164814,
+        "11111111-1111-4111-8111-111111111303": 0.8166878837212945
+      },
+      "expected_chunk_ids": [
+        "11111111-1111-4111-8111-111111111301"
+      ],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 38.44319999916479,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "dense_chunk_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "sparse_chunk_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "bm25_chunk_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "fused_chunk_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "reranked_chunk_ids": [
+          "11111111-1111-4111-8111-111111111301",
+          "11111111-1111-4111-8111-111111111302",
+          "11111111-1111-4111-8111-111111111303"
+        ],
+        "latency_ms": {
+          "policy_filter": 10.311199999705423,
+          "embedding": 2.4060999967332464,
+          "search": 7.056200000079116,
+          "fusion": 0.02890000178012997,
+          "rerank": 7.346000002144137,
+          "total": 38.28290000092238
+        },
+        "retrieved_scores": {
+          "11111111-1111-4111-8111-111111111301": 0.95375,
+          "11111111-1111-4111-8111-111111111302": 0.8229346835164814,
+          "11111111-1111-4111-8111-111111111303": 0.8166878837212945
+        }
+      },
+      "pipeline": {
+        "evidence_status": "sufficient",
+        "evidence_action": "generate",
+        "citation_chunk_ids": [
+          "11111111-1111-4111-8111-111111111301"
+        ],
+        "unauthorized_citation_ids": [],
+        "confidence": "high",
+        "evidence_reason": "status=sufficient; top_score=0.9229166666666667; score_gap=0.09791666666666676; independent_sources=1; citation_metadata=complete; versions=current; evidence meets the configured domain thresholds",
+        "latency_ms": 167.8128999992623
+      }
+    },
+    {
+      "query": "Quy định EVAL-PUBLIC-2026 áp dụng cho ai?",
+      "expected_status": "sufficient",
+      "actual_status": "sufficient",
+      "retrieved_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "retrieved_scores": {
+        "22222222-2222-4222-8222-222222222301": 1.0
+      },
+      "expected_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 32.983299999614246,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "dense_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "sparse_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "bm25_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "fused_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "reranked_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "latency_ms": {
+          "policy_filter": 10.455399999045767,
+          "embedding": 0.685499999235617,
+          "search": 9.427300003153505,
+          "fusion": 0.028399997972883284,
+          "rerank": 7.089799997629598,
+          "total": 32.838399998581735
+        },
+        "retrieved_scores": {
+          "22222222-2222-4222-8222-222222222301": 1.0
+        }
+      },
+      "pipeline": {
+        "evidence_status": "sufficient",
+        "evidence_action": "abstain",
+        "citation_chunk_ids": [],
+        "unauthorized_citation_ids": [],
+        "confidence": "low",
+        "evidence_reason": "status=sufficient; top_score=1.0; score_gap=inf; independent_sources=1; citation_metadata=complete; versions=current; evidence meets the configured domain thresholds",
+        "latency_ms": 140.46270000108052
+      }
+    },
+    {
+      "query": "Mức thưởng mật của đơn vị RND là bao nhiêu?",
+      "expected_status": "not_found",
+      "actual_status": "sufficient",
+      "retrieved_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "retrieved_scores": {
+        "22222222-2222-4222-8222-222222222301": 0.4
+      },
+      "expected_chunk_ids": [],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 24.318700001458637,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "dense_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "sparse_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "bm25_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "fused_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "reranked_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "latency_ms": {
+          "policy_filter": 7.7253000017663,
+          "embedding": 1.2118999984522816,
+          "search": 5.502700001670746,
+          "fusion": 0.030300001526484266,
+          "rerank": 4.252400001860224,
+          "total": 24.225000001024455
+        },
+        "retrieved_scores": {
+          "22222222-2222-4222-8222-222222222301": 0.4
+        }
+      },
+      "pipeline": {
+        "evidence_status": "weak",
+        "evidence_action": "retry",
+        "citation_chunk_ids": [],
+        "unauthorized_citation_ids": [],
+        "confidence": "low",
+        "evidence_reason": "status=weak; top_score=0.0; score_gap=inf; independent_sources=1; citation_metadata=complete; versions=current; retry=0/2",
+        "latency_ms": 99.19100000115577
+      }
+    },
+    {
+      "query": "Giá vàng hôm nay bao nhiêu?",
+      "expected_status": "not_found",
+      "actual_status": "sufficient",
+      "retrieved_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "retrieved_scores": {
+        "22222222-2222-4222-8222-222222222301": 0.4
+      },
+      "expected_chunk_ids": [],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 28.481500001362292,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "dense_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "sparse_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "bm25_chunk_ids": [],
+        "fused_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "reranked_chunk_ids": [
+          "22222222-2222-4222-8222-222222222301"
+        ],
+        "latency_ms": {
+          "policy_filter": 15.434200002346188,
+          "embedding": 0.4670999987865798,
+          "search": 2.6107000012416393,
+          "fusion": 0.024500001018168405,
+          "rerank": 5.28409999969881,
+          "total": 28.344600003038067
+        },
+        "retrieved_scores": {
+          "22222222-2222-4222-8222-222222222301": 0.4
+        }
+      },
+      "pipeline": {
+        "evidence_status": "weak",
+        "evidence_action": "retry",
+        "citation_chunk_ids": [],
+        "unauthorized_citation_ids": [],
+        "confidence": "low",
+        "evidence_reason": "status=weak; top_score=0.0; score_gap=inf; independent_sources=1; citation_metadata=complete; versions=current; retry=0/2",
+        "latency_ms": 125.99279999994906
+      }
+    },
+    {
+      "query": "Quy định EVAL-EXPIRED-2024 còn áp dụng vào năm 2026 không?",
+      "expected_status": "not_found",
+      "actual_status": "not_found",
+      "retrieved_chunk_ids": [],
+      "retrieved_scores": {},
+      "expected_chunk_ids": [],
+      "unauthorized_chunk_ids": [],
+      "latency_ms": 16.683000001648907,
+      "evaluation_trace": {
+        "authorized_candidate_ids": [],
+        "dense_chunk_ids": [],
+        "sparse_chunk_ids": [],
+        "bm25_chunk_ids": [],
+        "fused_chunk_ids": [],
+        "reranked_chunk_ids": [],
+        "latency_ms": {
+          "policy_filter": 16.170399998372886,
+          "total": 16.591999999945983
+        }
+      },
+      "pipeline": {
+        "evidence_status": "not_found",
+        "evidence_action": "abstain",
+        "citation_chunk_ids": [],
+        "unauthorized_citation_ids": [],
+        "confidence": "low",
+        "evidence_reason": "status=not_found; top_score=unavailable; score_gap=unavailable; independent_sources=0; citation_metadata=incomplete; versions=not_current_or_unknown; no evidence is available; generation is disabled",
+        "latency_ms": 71.27089999994496
+      }
+    }
+  ],
+  "pipeline": {
+    "outcome_accuracy": 0.8571428571428571,
+    "exact_status_accuracy": 0.7142857142857143,
+    "citation_correctness": 0.8571428571428571,
+    "unauthorized_citation_rate": 0.0,
+    "mean_latency_ms": 140.90541428595316
+  }
+}

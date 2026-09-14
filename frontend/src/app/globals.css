@@ -1,0 +1,196 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #b5121b;
+  --color-primary-hover: #930f16;
+  --color-primary-active: #760c12;
+  --color-primary-soft: #fff1f2;
+  --color-accent: #7c3aed;
+  --color-background: #f5f7fb;
+  --color-card: #ffffff;
+  --color-text: #101828;
+  --color-text-secondary: #344054;
+  --color-text-muted: #667085;
+  --color-text-subtle: #98a2b3;
+  --color-border: #e4e9f2;
+  --color-border-strong: #d0d7e5;
+  --color-surface-muted: #f7f9fc;
+  --color-success: #087443;
+  --color-success-soft: #ecfdf3;
+  --color-warning: #b54708;
+  --color-warning-soft: #fffaeb;
+  --color-error: #b42318;
+  --color-error-soft: #fef3f2;
+  --color-info: #175cd3;
+  --color-info-soft: #eff8ff;
+  --radius-card: 14px;
+  --radius-control: 10px;
+  --radius-small: 9px;
+  --shadow-card: 0 1px 2px rgb(16 24 40 / 3%), 0 8px 24px rgb(16 24 40 / 5%);
+  --shadow-card-hover: 0 16px 36px rgb(36 63 108 / 11%);
+  --shadow-overlay: 0 24px 64px rgb(15 23 42 / 18%);
+  --focus-ring: 0 0 0 4px rgb(181 18 27 / 13%);
+  --page-max-width: 1480px;
+  --page-padding: clamp(20px, 2.4vw, 36px);
+  --section-gap: 34px;
+  color-scheme: light;
+  font-family: Inter, "Be Vietnam Pro", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-width: 0;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-variant-numeric: tabular-nums;
+  overflow-x: clip;
+}
+
+img {
+  max-width: 100%;
+}
+
+main,
+section,
+article,
+aside,
+nav,
+header,
+footer {
+  min-width: 0;
+}
+
+::selection {
+  background: rgb(181 18 27 / 18%);
+  color: #0b1930;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--color-text-subtle);
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  opacity: 0.55;
+}
+
+[class*="card"],
+[class*="panel"],
+[class*="Card"],
+[class*="Panel"] {
+  background-clip: padding-box;
+}
+
+button,
+a {
+  transition-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+button:active,
+a:active {
+  transform: scale(0.985);
+}
+
+button {
+  touch-action: manipulation;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+  cursor: not-allowed;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: #c7d0df;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #98a2b3;
+  background-clip: padding-box;
+}
+
+.responsive-scroll {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  button:active,
+  a:active {
+    transform: none;
+  }
+}

@@ -1,0 +1,2 @@
+{"question":"Thời hạn xử lý hồ sơ là bao lâu?","department":"PUBLIC","roles":["staff"],"expected_chunk_ids":[],"reference":"Thay bằng câu trả lời chuẩn đã được data owner xác nhận."}
+{"question":"Nội dung Điều 12 Khoản 1 là gì?","department":"TCCB","roles":["staff"],"expected_chunk_ids":[],"reference":"Thay bằng câu trả lời chuẩn và căn cứ đúng của Điều 12 Khoản 1."}

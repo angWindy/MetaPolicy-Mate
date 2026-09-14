@@ -1,0 +1,33 @@
+from enum import Enum
+
+
+class AuditAction(Enum):
+    CREATE = 0
+    UPDATE = 1
+    DELETE = 2
+
+    LOGIN = 3
+    LOGOUT = 4
+    REFRESH_TOKEN = 5
+
+    CREATE_SCHOOL = 6
+    DISABLE_SCHOOL = 7
+    DELETE_FAILED_SCHOOL = 8
+    RETRY_PROVISIONING = 9
+    COMPLETE_ONBOARDING = 10
+    RESEND_ONBOARDING_EMAIL = 11
+
+    PUBLISH_PLAN = 12
+
+    CREATE_USER = 13
+    DISABLE_USER = 14
+
+    UPGRADE_PLAN = 15
+    DOWNGRADE_PLAN = 16
+
+    ASSIGN_ROLE = 17
+    REMOVE_ROLE = 18
+
+    RESET_PASSWORD = 19
+
+    RESTORE = 20

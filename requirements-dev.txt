@@ -1,0 +1,19 @@
+-r requirements.txt
+-r requirements-rag.txt
+
+# Test framework
+pytest>=8,<9
+pytest-asyncio>=0.24,<1
+pytest-cov>=5,<7
+
+# Linting / formatting
+ruff==0.6.9
+
+# Type checking
+mypy>=1.10,<2
+
+# HTTP test client
+httpx>=0.28,<1
+
+# Runtime utilities for tests
+fakeredis>=2.23,<3

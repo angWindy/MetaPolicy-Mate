@@ -1,0 +1,9 @@
+node_modules
+.next
+.next/standalone
+.next/static
+.env.local
+.env*.local
+npm-debug.log*
+.DS_Store
+*.log

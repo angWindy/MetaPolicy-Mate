@@ -1,0 +1,8 @@
+.composer { box-sizing: border-box; width: 100%; min-width: 0; border: 1px solid var(--color-border-strong); border-radius: 12px; background: #fff; transition: border-color 180ms ease, box-shadow 180ms ease; }
+.composer:focus-within { border-color: var(--color-primary); box-shadow: var(--focus-ring); }
+.inputRow { display: grid; min-width: 0; align-items: center; gap: 12px; padding: 12px; color: var(--color-primary); grid-template-columns: auto minmax(0, 1fr) auto; }
+.composer textarea { box-sizing: border-box; width: 100%; min-width: 0; height: 44px; resize: none; padding: 10px 0; border: 0; outline: 0; background: transparent; color: var(--color-text); font-size: 14px; line-height: 1.6; }
+.footer { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 10px 14px; border-top: 1px solid #edf1f7; color: var(--color-text-muted); font-size: 10px; }
+.footer span { display: inline-flex; align-items: center; gap: 5px; }
+.send { display: inline-flex; min-width: 146px; min-height: 44px; cursor: pointer; align-items: center; justify-content: center; gap: 8px; border: 0; border-radius: 8px; background: var(--color-primary); color: #fff; font-size: 13px; font-weight: 700; }.send:hover:not(:disabled) { background: var(--color-primary-hover); }.send:disabled { opacity: .42; }
+@media (max-width: 640px) { .inputRow { align-items: start; grid-template-columns: auto minmax(0, 1fr); }.composer textarea { height: 72px; }.send { width: 100%; grid-column: 1 / -1; }.footer { align-items: flex-start; flex-direction: column; gap: 6px; } }

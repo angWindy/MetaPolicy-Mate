@@ -1,0 +1,86 @@
+services:
+  - type: keyvalue
+    name: p234-cache
+    region: singapore
+    plan: free
+    ipAllowList: []
+    maxmemoryPolicy: allkeys-lru
+    persistenceMode: off
+
+  - type: web
+    name: p234-api
+    runtime: python
+    region: singapore
+    plan: free
+    branch: demo
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn src.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.16
+      - key: APP_ENV
+        value: production
+      - key: APP_HOST
+        value: 0.0.0.0
+      - key: LOG_LEVEL
+        value: INFO
+      - key: CORS_ORIGINS
+        sync: false
+      # school_id and school_code are no longer read from environment.
+      # Tenant identity is per-user (from department_id in the JWT).
+      - key: TENANT_DATABASE_URL
+        sync: false
+      - key: DATABASE_URL
+        fromService:
+          type: web
+          name: p234-api
+          envVarKey: TENANT_DATABASE_URL
+      - key: REDIS_URL
+        fromService:
+          type: keyvalue
+          name: p234-cache
+          property: connectionString
+      - key: JWT_ISSUER
+        value: policymeta
+      - key: JWT_AUDIENCE
+        value: policymeta-web
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: JWT_ACCESS_TOKEN_MINUTES
+        value: 30
+      - key: JWT_REFRESH_TOKEN_DAYS
+        value: 7
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: MODEL_NAME
+        value: gpt-4o-mini
+      - key: GENERATOR_PROVIDER
+        value: openai
+      - key: EMBEDDING_PROVIDER
+        value: hash
+      - key: EMBEDDING_FALLBACK_PROVIDERS
+        value: hash
+      - key: VECTOR_BACKEND
+        value: memory
+      - key: RERANKER_PROVIDER
+        value: lexical_fallback
+      - key: LLM_FALLBACK_PROVIDERS
+        value: template
+      - key: DEV_AUTH_BYPASS
+        value: false
+      - key: DOCLING_ENABLED
+        value: false
+      - key: OCR_ENABLED
+        value: false
+      - key: DATA_DIR
+        value: /tmp/p234-data
+      - key: R2_ENDPOINT
+        value: ""
+      - key: R2_ACCESS_KEY_ID
+        value: ""
+      - key: R2_SECRET_ACCESS_KEY
+        value: ""
+      - key: R2_BUCKET_NAME
+        value: ""

@@ -1,0 +1,262 @@
+{
+  "dataset": "docs\\eval\\datasets\\golden_questions.regression.jsonl",
+  "dataset_valid": true,
+  "status": "FAIL",
+  "metrics": {
+    "cases": 7.0,
+    "observations": 7.0
+  },
+  "by_category": {
+    "department_retrieval": {
+      "cases": 1.0,
+      "recall_at_100": 1.0,
+      "precision_at_5": 0.2,
+      "citation_correctness": 1.0,
+      "abstention_accuracy": 1.0
+    },
+    "exact_answer": {
+      "cases": 1.0,
+      "recall_at_100": 1.0,
+      "precision_at_5": 0.2,
+      "citation_correctness": 1.0,
+      "abstention_accuracy": 1.0
+    },
+    "identifier": {
+      "cases": 1.0,
+      "recall_at_100": 1.0,
+      "precision_at_5": 0.2,
+      "citation_correctness": 1.0,
+      "abstention_accuracy": 1.0
+    },
+    "public_retrieval": {
+      "cases": 1.0,
+      "recall_at_100": 1.0,
+      "precision_at_5": 0.2,
+      "citation_correctness": 0.0,
+      "abstention_accuracy": 0.0
+    },
+    "unauthorized": {
+      "cases": 1.0,
+      "recall_at_100": null,
+      "precision_at_5": null,
+      "citation_correctness": 1.0,
+      "abstention_accuracy": 1.0
+    },
+    "out_of_domain": {
+      "cases": 1.0,
+      "recall_at_100": null,
+      "precision_at_5": null,
+      "citation_correctness": 1.0,
+      "abstention_accuracy": 1.0
+    },
+    "expired_version": {
+      "cases": 1.0,
+      "recall_at_100": null,
+      "precision_at_5": null,
+      "citation_correctness": 1.0,
+      "abstention_accuracy": 1.0
+    }
+  },
+  "variants": {
+    "hybrid_rrf": {
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 1.0,
+      "top1_accuracy": 1.0,
+      "latency_ms": 10.209224999925937
+    },
+    "hybrid_reranker": {
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 1.0,
+      "top1_accuracy": 1.0,
+      "latency_ms": 10.209224999925937
+    }
+  },
+  "failures": [
+    "row 4 [public_retrieval]: expected evidence missing from citations; abstention mismatch: expected=False, actual=True",
+    "C-025: Precision@5 gate is not interpretable because the dataset does not exhaustively label five relevant chunks per answerable case."
+  ],
+  "gate": {
+    "status": "FAIL",
+    "checks": {
+      "recall_at_100": true,
+      "precision_at_5": false,
+      "citation_id_validity": true,
+      "unauthorized_retrieval": true,
+      "graph_no_bypass": true,
+      "reranker_ndcg_improvement": false
+    },
+    "missing_metrics": []
+  },
+  "run_metadata": {
+    "generated_at_utc": "2026-09-04T12:17:55.693484+00:00",
+    "dataset_sha256": "53eecccd7a3a0e4dddb612f384b7057d53f157b5fcb39524cad86bb805810722",
+    "observations_sha256": "452cccbe92472a01bb5fcd0ac1e3117431ea764e5393fe41ce2d46a67441596e",
+    "index_version": "synthetic-regression-20260904",
+    "maximum_relevance_labels_per_case": 1
+  },
+  "stage_metrics": {
+    "Stage 1 - Candidate Retrieval": {
+      "recall_at_50": 1.0,
+      "recall_at_100": 1.0,
+      "mrr": 1.0,
+      "unauthorized_retrieval_rate": 0.0,
+      "latency_ms": 20.53031428606898,
+      "latency_p50_ms": 19.802399998297915,
+      "latency_p95_ms": 31.481699999858392
+    },
+    "Stage 2 - Reranking": {
+      "precision_at_5": 0.2,
+      "recall_at_5": 1.0,
+      "mrr_at_5": 1.0,
+      "ndcg_at_5": 1.0,
+      "top1_accuracy": 1.0,
+      "latency_ms": 10.209224999925937,
+      "latency_p50_ms": 7.346000002144137,
+      "latency_p95_ms": 15.142500000365544
+    },
+    "Stage 3 - Governed RAG": {
+      "faithfulness": null,
+      "citation_correctness": 0.8571428571428571,
+      "citation_id_validity": 1.0,
+      "answer_relevancy": null,
+      "abstention_accuracy": 0.8571428571428571,
+      "version_correctness": 1.0,
+      "latency_p50_ms": 140.46270000108052,
+      "latency_p95_ms": 229.72759999902337
+    }
+  },
+  "case_results": [
+    {
+      "row": 1,
+      "category": "department_retrieval",
+      "expected_chunk_ids": [
+        "11111111-1111-4111-8111-111111111302"
+      ],
+      "retrieved_top_5": [
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "reranked_top_5": [
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [
+        "11111111-1111-4111-8111-111111111302"
+      ],
+      "expected_abstention": false,
+      "actual_abstention": false
+    },
+    {
+      "row": 2,
+      "category": "exact_answer",
+      "expected_chunk_ids": [
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "retrieved_top_5": [
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "reranked_top_5": [
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "expected_abstention": false,
+      "actual_abstention": false
+    },
+    {
+      "row": 3,
+      "category": "identifier",
+      "expected_chunk_ids": [
+        "11111111-1111-4111-8111-111111111301"
+      ],
+      "retrieved_top_5": [
+        "11111111-1111-4111-8111-111111111301",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "reranked_top_5": [
+        "11111111-1111-4111-8111-111111111301",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "citation_chunk_ids": [
+        "11111111-1111-4111-8111-111111111301"
+      ],
+      "expected_abstention": false,
+      "actual_abstention": false
+    },
+    {
+      "row": 4,
+      "category": "public_retrieval",
+      "expected_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "retrieved_top_5": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "reranked_top_5": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [],
+      "expected_abstention": false,
+      "actual_abstention": true
+    },
+    {
+      "row": 5,
+      "category": "unauthorized",
+      "expected_chunk_ids": [],
+      "retrieved_top_5": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "reranked_top_5": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [],
+      "expected_abstention": true,
+      "actual_abstention": true
+    },
+    {
+      "row": 6,
+      "category": "out_of_domain",
+      "expected_chunk_ids": [],
+      "retrieved_top_5": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "reranked_top_5": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [],
+      "expected_abstention": true,
+      "actual_abstention": true
+    },
+    {
+      "row": 7,
+      "category": "expired_version",
+      "expected_chunk_ids": [],
+      "retrieved_top_5": [],
+      "reranked_top_5": [],
+      "citation_chunk_ids": [],
+      "expected_abstention": true,
+      "actual_abstention": true
+    }
+  ],
+  "limitations": [
+    "A separate current live sweep completed against the local API with PostgreSQL, Qdrant, and Redis: 110 cases, document precision 0.9608, recall 0.98, F1 0.9703, evidence hit rate 0.80, answer correctness 0.8636, and case pass rate 0.7727.",
+    "The full repository suite completed with 502 passed, 39 failed, and 5 errors before the live services were available. The focused evaluation and hybrid retrieval suite passed 33 tests."
+  ]
+}

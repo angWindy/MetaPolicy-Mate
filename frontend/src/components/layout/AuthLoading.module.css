@@ -1,0 +1,114 @@
+.shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--color-bg-app, #f5f7fb);
+}
+
+.topbar {
+  height: 72px;
+  border-bottom: 1px solid var(--color-border-soft, #e5e7eb);
+  background: var(--color-bg-surface, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 0 clamp(20px, 4vw, 64px);
+}
+
+.brandMark {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  background: var(--color-border-soft, #e5e7eb);
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.titleBar {
+  flex: 1;
+  height: 18px;
+  max-width: 240px;
+  margin: 0 24px;
+  border-radius: 4px;
+  background: var(--color-border-soft, #e5e7eb);
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.accountBlock {
+  width: 120px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--color-border-soft, #e5e7eb);
+  animation: shimmer 1.4s ease-in-out infinite;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 28px;
+  background: var(--color-bg-surface, #ffffff);
+  border: 1px solid var(--color-border-soft, #e5e7eb);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.04);
+  max-width: 420px;
+}
+
+.compact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+}
+
+.spinner {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 3px solid var(--color-border-soft, #e5e7eb);
+  border-top-color: var(--color-primary, #2563eb);
+  animation: spin 0.9s linear infinite;
+  flex-shrink: 0;
+}
+
+.messageText {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.messageTitle {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-strong, #111827);
+}
+
+.messageSubtitle {
+  font-size: 13px;
+  color: var(--color-text-muted, #6b7280);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}

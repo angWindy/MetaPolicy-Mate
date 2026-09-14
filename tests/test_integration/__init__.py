@@ -1,0 +1,1 @@
+"""Mark integration tests folder as a Python package."""

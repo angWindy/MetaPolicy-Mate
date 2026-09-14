@@ -1,0 +1,3 @@
+# Backward-compatible entrypoint. The RAG runtime is now the main application,
+# so its complete dependency set is maintained in one canonical file.
+-r requirements.txt

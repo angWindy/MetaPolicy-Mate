@@ -1,0 +1,7 @@
+# Optional local PDF/OCR stack. This includes the canonical application runtime.
+-r requirements.txt
+
+docling>=2,<3
+easyocr>=1.7,<2
+opencv-python-headless>=4.10,<5
+pymupdf>=1.24,<2

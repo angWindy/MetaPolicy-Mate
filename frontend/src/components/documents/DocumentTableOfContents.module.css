@@ -1,0 +1,51 @@
+.toc {
+  position: sticky;
+  top: 96px;
+  padding: 18px;
+  border: 1px solid var(--color-border, #e2e8f0);
+  border-radius: 14px;
+  background: var(--color-card, #fff);
+}
+
+.toc h2 {
+  margin: 0 0 12px;
+  color: var(--color-text, #0f172a);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.toc ol {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.toc a {
+  display: block;
+  padding: 8px;
+  border-radius: 8px;
+  color: var(--color-text-muted, #64748b);
+  font-size: 12px;
+  line-height: 1.45;
+  text-decoration: none;
+}
+
+.toc a:hover {
+  background: var(--color-background, #f8fafc);
+  color: var(--color-primary, #2563eb);
+}
+
+.toc a:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary, #2563eb) 35%, white);
+  outline-offset: 2px;
+}
+
+@media (max-width: 840px) {
+  .toc {
+    position: static;
+  }
+}
+

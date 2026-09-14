@@ -1,0 +1,28 @@
+.sidebar { box-sizing: border-box; display: flex; position: sticky; top: 0; flex-direction: column; width: 236px; height: 100dvh; padding: 18px 12px 14px; border-right: 1px solid #e5e9f0; background: #fff; }
+.closeButton { display: none; }
+.brand { display: flex; align-items: center; gap: 10px; padding: 4px 9px 21px; color: var(--color-text); text-decoration: none; }
+.logoMark { display: grid; width: 38px; height: 38px; place-items: center; border-radius: 10px; background: var(--color-primary); color: #fff; box-shadow: 0 7px 16px color-mix(in srgb, var(--color-primary) 22%, transparent); }
+.logoCopy { min-width: 0; }
+.logoText { font-size: 19px; font-weight: 760; letter-spacing: -.035em; }
+.logoText strong { color: var(--color-primary); }
+.logoCopy small { display: block; margin-top: 2px; color: var(--color-text-muted); font-size: 9px; letter-spacing: .01em; }
+.workspaceLabel { padding: 0 12px 10px; color: var(--color-text-subtle); font-size: 10px; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }
+.navigation { display: flex; flex: 1; flex-direction: column; gap: 4px; }
+.navItem { display: grid; position: relative; min-height: 46px; align-items: center; gap: 11px; padding: 0 12px; border-radius: 10px; color: var(--color-text-muted); font-size: 13px; font-weight: 580; grid-template-columns: 22px minmax(0,1fr); text-decoration: none; transition: background 160ms ease, color 160ms ease; }
+.navItem:hover { background: var(--color-surface-muted); color: var(--color-text); }
+.navItem.active { background: var(--color-primary-soft); color: var(--color-primary); font-weight: 700; box-shadow: inset 3px 0 0 var(--color-primary); }
+.navIcon { display: grid; width: 22px; height: 22px; place-items: center; }
+.navIcon svg { stroke-width: 1.8; }
+.helpCard { display: flex; align-items: center; gap: 10px; margin: 12px 3px 0; padding: 12px; border: 1px solid var(--color-border); border-radius: 12px; background: var(--color-surface-muted); }
+.helpIcon { display: grid; width: 32px; height: 32px; flex: 0 0 32px; place-items: center; border-radius: 9px; background: #fff; color: var(--color-primary); border: 1px solid var(--color-border); }
+.helpCard strong, .helpCard span { display: block; }
+.helpCard strong { color: var(--color-text-secondary); font-size: 11px; }
+.helpCard div > span { margin-top: 3px; color: var(--color-text-muted); font-size: 10px; }
+.brand:focus-visible, .navItem:focus-visible { outline: 3px solid color-mix(in srgb, var(--color-primary) 24%, transparent); outline-offset: 2px; }
+
+@media (max-width: 900px) {
+  .sidebar { position: fixed; z-index: 40; left: 0; max-width: min(86vw, 300px); transform: translateX(-100%); visibility: hidden; box-shadow: 14px 0 42px rgb(15 23 42 / 18%); transition: transform 200ms ease, visibility 200ms; }
+  .sidebar.mobileOpen { transform: translateX(0); visibility: visible; }
+  .closeButton { display: grid; position: absolute; z-index: 2; top: 18px; right: 12px; width: 38px; height: 38px; cursor: pointer; place-items: center; border: 1px solid var(--color-border); border-radius: 10px; background: #fff; color: var(--color-text-secondary); }
+}
+@media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }

@@ -1,0 +1,8 @@
+.pagination { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.summary { margin: 0; color: var(--color-text-muted); font-size: 13px; }
+.controls { display: flex; align-items: center; gap: 4px; }
+.page { display: grid; min-width: 36px; height: 36px; cursor: pointer; place-items: center; border: 1px solid transparent; border-radius: var(--radius-small); background: transparent; color: var(--color-text-secondary); font-size: 13px; font-weight: 600; }
+.page:hover:not(:disabled) { background: var(--color-surface-muted); }
+.active { border-color: var(--color-primary); background: var(--color-primary); color: #fff; }
+.page:disabled { cursor: not-allowed; color: var(--color-text-subtle); }
+@media (max-width: 560px) { .pagination { align-items: flex-start; flex-direction: column; } .summary { order: 2; } }

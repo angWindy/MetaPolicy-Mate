@@ -1,0 +1,589 @@
+{
+  "summary": {
+    "total": 21,
+    "needle_found": 21,
+    "expected_document_present": 21,
+    "labelled_chunk_ids_current": 0
+  },
+  "cases": [
+    {
+      "id": "Q01",
+      "expected_needle": "26 triệu đồng/năm",
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "cfd531fa-3635-5a5e-b203-2eda2d177a58"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q02",
+      "expected_needle": "132 tín chỉ",
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "50729763-cba8-5274-a334-fc1d2e974d92"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q03",
+      "expected_needle": "N5",
+      "match_count": 17,
+      "matched_documents": [
+        "RAW-HUCE-1125-quy-che-kpis",
+        "RAW-HUCE-1126-quy-che-tien-luong",
+        "RAW-HUCE-1145-quy-dinh-cham-cong",
+        "RAW-HUCE-quy-che-nhom-chuyen-mon",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "1de7b779-ed99-51d8-9965-c018c4200e95",
+        "227988a8-c2cf-5f7a-8a0e-4d0e42826ec8",
+        "4af50eb3-18ee-52db-9266-3ed16678b07f",
+        "bc3782a0-4d15-5f1d-9ddd-ee1551cccde0",
+        "ece5ce66-4fb0-5272-8b28-bea8e1eed3fb",
+        "f275a4e9-c478-533f-8875-4044ddbec67d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q04",
+      "expected_needle": "5.5",
+      "match_count": 20,
+      "matched_documents": [
+        "RAW-HUCE-1126-quy-che-tien-luong",
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0c39c175-50e7-51fa-8a85-8210e133d913",
+        "16a4ae2d-e5f5-553b-a03f-b512a4b5de78",
+        "4e91be86-c341-5bda-ac6a-dd2b32a1b173",
+        "5279a0c5-29bb-5e1a-8a1a-84d49f46a453",
+        "5a8adbd1-f82f-554f-94dd-4b04f3b315d9",
+        "7244432a-8be5-5c22-b4fb-f563e83b9565",
+        "8dac92ff-6f35-532a-a2a6-487c56fd040e",
+        "af36c2b2-97ca-533a-8a53-62583d77b355",
+        "af8a15a6-bc93-5eb3-85cd-35d23792baf8",
+        "d257ceb1-afd4-544b-8307-61e6f668c20f"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q05",
+      "expected_needle": "Goethe",
+      "match_count": 8,
+      "matched_documents": [
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "1de7b779-ed99-51d8-9965-c018c4200e95",
+        "7180adaa-9005-596d-a165-fd843e1bd8a6",
+        "878623ad-5efc-58e9-8bb8-adc94b82393f",
+        "f275a4e9-c478-533f-8875-4044ddbec67d"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "7180adaa-9005-596d-a165-fd843e1bd8a6",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": " chỉ\ntrong CTĐT\nHọc phần được miễn/cần học theo\nchứng chỉ đạt được\n[1] [2] [3] [4]\n1 QT0514 Tiếng Đức 1 8(4-8-0-16) Có (4 TC) M M M M\n2 QT0524 Tiếng Đức 2 6(5-2-0-12) Có (3 TC) H M M M\n3 QT0534 Tiếng Đức 3 6(5-2-0-12) Có (3 TC) H M M M\n4 QT1514 Tiếng Đức 4 6(5-2-0-12) Có (3 TC) H H M M\n5 QT1524* Tiếng Đức 5 6(5-2-0-12) Không   M M\n6 QT1528* Tiếng Đức 6 6(4-4-0-12) Không    M\n7 QT1529* Tiếng Đức 7 6(4-4-0-12) Không    M\nGhi chú:\n[1]: Đạt trình độ Goethe-Zertifikat A1 hoặc tương đương [2]: Đạt trình độ Goethe-Zertifikat A2 hoặc tương đương\n[3]: Đạt trình độ Goethe-Zertifikat B1 hoặc tương đương [4]: Đạt trình độ Goethe-Zertifikat B2 hoặc tương đương\nM: được miễn học (ghi điểm R); H: bắt buộc học.\n(*) Học phần QT1524 Tiếng Đức 5: chỉ dành cho các sinh viên học chuyển tiếp sang Đức theo chương trình Kỹ thuật Điện tử - Viễn\nthông, hợp tác với ĐH Leibniz Hannover.\n(*) Học phần QT1524 Tiếng Đức 5, QT"
+        },
+        {
+          "chunk_id": "f275a4e9-c478-533f-8875-4044ddbec67d",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "| M | M |\n| 4 | QT1514 | Tiếng Đức 4 | 6(5-2-0-12) | Có (3 TC) | H | H | M | M |\n| 5 | QT1524* | Tiếng Đức 5 | 6(5-2-0-12) | Không |  |  | M | M |\n| 6 | QT1528* | Tiếng Đức 6 | 6(4-4-0-12) | Không |  |  |  | M |\n| 7 | QT1529* | Tiếng Đức 7 | 6(4-4-0-12) | Không |  |  |  | M |\n20\nBảng 8.2. Yêu cầu chuẩn tiếng Đức với các chương trình đào tạo sử dụng ngoại ngữ chính là tiếng Đức\nSố tín chỉ tích lũy Trình độ ngoại ngữ yêu cầu\nTừ 32 TC Đạt chứng chỉ Goethe-Zertifikat A2 hoặc tương đương (theo Bảng quy đổi 8.3)\nHoặc đạt các học phần số thứ tự 1 & 2 trong Bảng 8.1\nTừ 64 TC Đạt chứng chỉ Goethe-Zertifikat B1 hoặc tương đương (theo Bảng quy đổi 8.3)\nHoặc đạt các học phần số thứ tự 1÷4 trong Bảng 8.1\nĐiều kiện được xét nhận đồ\nán/khóa luận tốt nghiệp\nĐạt trình độ Goethe-Zertifikat B1 hoặc tương đương (theo Bảng quy đổi 8.3)\nHoặc đạt các học phần số thứ tự 1÷4 trong Bảng 8.1\nĐiều kiện khi xét tốt nghiệp"
+        },
+        {
+          "chunk_id": "878623ad-5efc-58e9-8bb8-adc94b82393f",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "| Số tín chỉ tích lũy | Trình độ ngoại ngữ yêu cầu |\n|---|---|\n| Từ 32 TC | Đạt chứng chỉ Goethe-Zertifikat A2 hoặc tương đương (theo Bảng quy đổi 8.3) Hoặc đạt các học phần số thứ tự 1 & 2 trong Bảng 8.1 |\n| Từ 64 TC | Đạt chứng chỉ Goethe-Zertifikat B1 hoặc tương đương (theo Bảng quy đổi 8.3) Hoặc đạt các học phần số thứ tự 1÷4 trong Bảng 8.1 |\n| Điều kiện được xét nhận đồ án/khóa luận tốt nghiệp | Đạt trình độ Goethe-Zertifikat B1 hoặc tương đương (theo Bảng quy đổi 8.3) Hoặc đạt các học phần số thứ tự 1÷4 trong Bảng 8.1 |\n| Điều kiện kh"
+        },
+        {
+          "chunk_id": "1de7b779-ed99-51d8-9965-c018c4200e95",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "| Goethe-Zertifikat | TestDaF | DSD | TELC/ ÖSD/ HUSTGC |\n|---|---|---|---|\n| A1 |  |  | A1 |\n| A2 |  | DSD1 | A2 |\n| B1 |  |  | B1 |\n| B2 | TDN3 tương đương B2.1 TDN4 tương đương B2.2 | DSD2 | B2 |\n| C1 | TDN5 |  | C1 |\n| C2 |  |  | C2 |\n21\nPHỤ LỤC 9\nDanh mục các học phần và chuẩn yêu cầu đối với các chương trình đào tạo có ngoại ngữ chính là TIẾNG NHẬT\nBảng 9.1 Danh mục các học phần tiếng Nhật yêu cầu với chương trình Cơ điện tử (hợp tác với ĐH Nagaoka"
+        }
+      ]
+    },
+    {
+      "id": "Q06",
+      "expected_needle": "2022",
+      "match_count": 14,
+      "matched_documents": [
+        "RAW-HUCE-1126-quy-che-tien-luong",
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-qd-369-ky-ngay-2-3-2026",
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUCE-quy-che-nhom-chuyen-mon",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "286fd59d-5143-588a-971a-3c29f91c1b22",
+        "c91637c4-c11b-5e5e-8042-7e3c1e3d8c15",
+        "dfd8175a-9579-501d-b342-1e932727f715"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q07",
+      "expected_needle": "2024-2025",
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-10714-table",
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "108a7c93-178d-5884-b5f9-9383811e1f0f",
+        "e639049c-de3b-511b-ac3b-5b6c11821243"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q08",
+      "expected_needle": "9,5",
+      "match_count": 1,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0c8a8d46-276e-5ba7-8636-bf0bf629131b"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "0c8a8d46-276e-5ba7-8636-bf0bf629131b",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "6. Điểm học phần được tính từ tổng điểm thành phần với trọng số tương ứng, làm\ntròn tới một chữ số thập phân và quy đổi thành điểm chữ theo quy tắc dưới đây, trừ trường\nhợp có một điểm thành phần là điểm liệt thì điểm học phần là điểm F. Để tính các điểm\ntrung bình, điểm học phần được quy đổi thành điểm số theo thang 4.\nĐiểm học phần theo\nthang 10\n0,0÷\n3,9\n4,0÷\n4,9\n5,0÷\n5,4\n5,5÷\n6,4\n6,5÷\n6,9\n7,0÷\n7,9\n8,0÷\n8,4\n8,5÷\n9,4\n9,5÷\n10\nĐiểm chữ quy đổi F D D+ C C+ B B+ A A+\nĐiểm số quy đổi 0 1 1,5 2,0 2,5 3,0 3,5 4,0 4,0"
+        }
+      ]
+    },
+    {
+      "id": "Q09",
+      "expected_needle": "Nguyễn Phong Điền",
+      "match_count": 5,
+      "matched_documents": [
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "1d7f0c1a-62d4-5bac-be8b-f2b843aa6623"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q10",
+      "expected_needle": "179",
+      "match_count": 5,
+      "matched_documents": [
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "100da123-ed99-5cda-9a7f-1853a73eb3e1",
+        "ad762d5a-eaac-5c26-a52c-01fb5f3a4f0e",
+        "c197cbd7-6bdf-5dd7-886e-d6549727f2a6",
+        "f19dc7c7-44cd-5bda-9a56-9f5b7f97600f"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q11",
+      "expected_needle": "Chu Văn Phiên",
+      "match_count": 2,
+      "matched_documents": [
+        "RAW-HUST-10714-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "d41769ba-0938-5686-9aaf-d6ecec85218c",
+        "f19dc7c7-44cd-5bda-9a56-9f5b7f97600f"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q12",
+      "expected_needle": "Tiếng Nhật",
+      "match_count": 19,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "1d0fa9ba-fc6c-5391-8162-d9ada9075078",
+        "599c95ac-8ef0-5d06-b6e1-05ee1e24bf5e",
+        "5df58d4b-8dff-5be9-b4b2-fdc6d7770f1d",
+        "b57acdd0-ae83-5cce-bd9d-ff1a540b9b87",
+        "b7ebae1b-a2ef-5429-a70c-976a6897b23e",
+        "bb7921de-5a7a-5245-b24b-4a509651a669"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q13",
+      "expected_needle": "Global ICT",
+      "match_count": 6,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "34deff84-7bb4-58a6-adbd-f19bfdaf50d6",
+        "4d83fea2-548b-528f-867c-9368612aba7d"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q14",
+      "expected_needle": "Phụ lục I",
+      "match_count": 23,
+      "matched_documents": [
+        "RAW-HUCE-1348-qd-bien-soan-lua-ch",
+        "RAW-HUCE-quy-dinh-to-chuc-va-danh",
+        "RAW-HUST-10232",
+        "RAW-HUST-10728",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0bdd511d-b5ac-5e30-9e9b-4dc88877e106",
+        "b030792f-af84-597d-bac9-139e87285ae9",
+        "edc35424-7072-5fc4-9e5f-3b52661d5b4f",
+        "f9ce19c2-d8db-5e0b-a9f0-016b0c7da2fd"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "b030792f-af84-597d-bac9-139e87285ae9",
+          "document_number": "RAW-HUST-956-table",
+          "excerpt": "Điều 1. Phê duyệt mức học phí các chương trình đào tạo đại học chính quy, đào tạo kỹ\nsư chuyên sâu đặc thù, vừa làm vừa học và sau đại học đối với học kỳ 2 năm học 2023-2024\ntại Phụ lục I kèm theo."
+        },
+        {
+          "chunk_id": "f9ce19c2-d8db-5e0b-a9f0-016b0c7da2fd",
+          "document_number": "RAW-HUST-956-table",
+          "excerpt": "| Số: /QĐ-ĐHBK |  | Hà Nội, ngày tháng 01 năm 2024 |\n|---|---|---|\nHọc phí được tính theo số tín chỉ học phí (TCHP) của các học phần được sinh viên\nđăng ký học ở mỗi học kỳ. Số TCHP của mỗi loại học phần trong chương trình đào tạo\nđược quy định tại Phụ lục II kèm theo."
+        },
+        {
+          "chunk_id": "0bdd511d-b5ac-5e30-9e9b-4dc88877e106",
+          "document_number": "RAW-HUST-956-table",
+          "excerpt": "Điều 2. Quyết định này có hiệu lực kể từ ngày ký  và thay thế quyết định số\n687/QĐ-ĐHBK ngày 22/ 01/2024 của ĐHBK Hà Nội . Các Ông/Bà Trưởng Ban Đào tạo,\nTài chính-Kế hoạch, Công tác sinh viên, Trưởng các Khoa, Viện, Hiệu trưởng các trường,\nsinh viên đại học hệ chính quy , kỹ sư chuyên sâu đặc thù, vừa làm vừa học và sau đại học\nchịu trách nhiệm thi hành quyết định này./.\nNơi nhận:\n- Như Điều 2;\n- Lưu: VT, ĐT.\nGIÁM ĐỐC\nPGS.TS Huỳnh Quyết Thắng\nPhụ lục I\nMỨC HỌC PHÍ CÁC CHƯƠNG TRÌNH ĐÀO TẠO ĐẠI HỌC CHÍNH QUY, ĐÀO\nTẠO KỸ SƯ CHUYÊN SÂU ĐẶC THÙ, VỪA LÀM VỪA HỌC VÀ SAU ĐẠI HỌC\nĐỐI VỚI HỌC KỲ 2 NĂM HỌC 2023-2024\n(Kèm theo Quyết định số:         /QĐ-ĐHBK ngày      tháng 01 năm 2024\ncủa Giám đốc Đại học Bách khoa Hà Nội )\nMức học phí/một TCHP đối với các học phần nằm trong khung chương trình đào tạo\nđược quy định cho 2 học kỳ chính của năm học theo đơn vị nghìn đồng như sau:"
+        },
+        {
+          "chunk_id": "edc35424-7072-5fc4-9e5f-3b52661d5b4f",
+          "document_number": "RAW-HUST-956-table",
+          "excerpt": "i Đại học, mức học phí được tính bằng\nmức học phí chương trình đào tạo chuẩn, cộng thêm các chi phí triển khai thực tế.\n- Đối với sinh viên nước ngoài tự chi trả kinh phí học tập, mức học phí  được tính\nbằng 1,5 lần mức học phí chương trình đào tạo chuẩn.\n- Mức học phí học lại một học phần tiến sĩ: 850.000 đồng (Bằng chữ: Tám trăm năm\nmươi nghìn đồng); thực hiện lại một chuyên đề tiến sĩ: 2.200.000 đồng (Bằng chữ: Hai\ntriệu hai trăm nghìn đồng).\nPhụ lục II\nQUY ĐỔI TÍN CHỈ HỌC TẬP (TCHT) SANG TÍN CHỈ HỌC PHÍ (TCHP)\n(Kèm theo Quyết định số:         /QĐ-ĐHBK ngày      tháng 01 năm 2024\ncủa Giám đốc Đại học Bách khoa Hà Nội )"
+        }
+      ]
+    },
+    {
+      "id": "Q15",
+      "expected_needle": "kỳ 1 năm học 2024",
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-10714-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "100da123-ed99-5cda-9a7f-1853a73eb3e1",
+        "d35b8c48-09ac-5f88-81d2-3776e50cca3b",
+        "f19dc7c7-44cd-5bda-9a56-9f5b7f97600f"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q16",
+      "expected_needle": "20240799E",
+      "match_count": 3,
+      "matched_documents": [
+        "RAW-HUST-10714-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "48002844-4cc1-59d0-a4e1-dd25dfa95aee",
+        "5e06daba-46cf-5362-a88f-acf0335c1314",
+        "c197cbd7-6bdf-5dd7-886e-d6549727f2a6"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "5e06daba-46cf-5362-a88f-acf0335c1314",
+          "document_number": "RAW-HUST-10714-table",
+          "excerpt": "8 20240796E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n167 Nguyễn Hữu Huy 20206524 20240801E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n168 Vũ Quang Huy 20206396 20240794E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n169 Cao Trung Kiên 20206404 20240800E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n170 Dương Hải Long 20206525 20240811E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n171 Hoàng Văn Mạnh 20206418 20240799E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n172 Phạm Văn Mạnh 20206421 20240152E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n173 Phạm Hoàng Minh 20206428 20240812E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n174 Nguyễn Hoàng Nam 20206433 20240808E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu\n175 Mai Hồng Quân 20206452 20240804E KỸ THUẬT VẬT LIỆU KỸ THUẬT VẬT LIỆU Trường Vật liệu"
+        },
+        {
+          "chunk_id": "48002844-4cc1-59d0-a4e1-dd25dfa95aee",
+          "document_number": "RAW-HUST-10714-table",
+          "excerpt": "Nguyễn Hữu Huy | 20206524 | 20240801E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 168 | Vũ Quang Huy | 20206396 | 20240794E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 169 | Cao Trung Kiên | 20206404 | 20240800E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 170 | Dương Hải Long | 20206525 | 20240811E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 171 | Hoàng Văn Mạnh | 20206418 | 20240799E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 172 | Phạm Văn Mạnh | 20206421 | 20240152E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |"
+        },
+        {
+          "chunk_id": "c197cbd7-6bdf-5dd7-886e-d6549727f2a6",
+          "document_number": "RAW-HUST-10714-table",
+          "excerpt": "| KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 171 | Hoàng Văn Mạnh | 20206418 | 20240799E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 172 | Phạm Văn Mạnh | 20206421 | 20240152E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 173 | Phạm Hoàng Minh | 20206428 | 20240812E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 174 | Nguyễn Hoàng Nam | 20206433 | 20240808E | KỸ THUẬT VẬT LIỆU | KỸ THUẬT VẬT LIỆU | Trường Vật liệu |\n| 175 | Mai Hồng Quân | 20206452 | 20240804E | KỸ THUẬT VẬT LIỆU | KỸ"
+        }
+      ]
+    },
+    {
+      "id": "Q17",
+      "expected_needle": "cảnh báo",
+      "match_count": 14,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0aedb386-18ef-50af-9ee6-5bc1e5d21a80",
+        "0e74349b-4034-51cd-bb31-e553927a242d",
+        "13819044-94e5-5a74-a8c6-748a2d580041",
+        "16d71adb-1e05-5f71-9af8-e7ad5c2c1531",
+        "29b2001d-7056-5002-8e27-470403d2a0cf",
+        "33d2a7a4-ce93-515c-9f70-d9f244155983",
+        "3f1098f7-6f3d-560f-9e54-f0dc4a2af132",
+        "3f520c50-e758-5a75-8c43-6d5198a07842",
+        "60265022-8894-5c5c-bfb3-e7c6f1aff3f5",
+        "65091e91-4394-548d-97d5-1d2a70f77b02",
+        "75c9541f-f9ed-5115-8efe-0e35c0a3ba44",
+        "9496b337-a910-5597-8fe7-19ad76f4ddbf",
+        "980475ea-28a2-57fa-94ee-60415e2a16b6",
+        "eb518525-a03a-526b-8659-8b64a6629b85"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "0aedb386-18ef-50af-9ee6-5bc1e5d21a80",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "Điều 19. Cảnh báo học tập và buộc thôi học ............................................................. 14"
+        },
+        {
+          "chunk_id": "eb518525-a03a-526b-8659-8b64a6629b85",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "a) Sinh viên không thuộc diện cảnh báo học tập theo quy định tại khoản 1 Điều 19\ncủa Quy chế này được đăng ký tối đa 24 TC và tối thiểu 12 TC trong học kỳ chính, không\náp dụng ngưỡng TC đăng ký tối thiểu với sinh viên trình độ năm cuối. Sinh viên được đăng\nký tối đa 8 TC trong học kỳ hè."
+        },
+        {
+          "chunk_id": "75c9541f-f9ed-5115-8efe-0e35c0a3ba44",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "b) Sinh viên đang bị cảnh báo học tập bị giới hạn khối lượng đăng ký học tập theo\nquy định tại khoản 2 Điều 19 của Quy chế này."
+        },
+        {
+          "chunk_id": "980475ea-28a2-57fa-94ee-60415e2a16b6",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "c) Không bị cảnh báo học tập;"
+        },
+        {
+          "chunk_id": "3f1098f7-6f3d-560f-9e54-f0dc4a2af132",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "3. Trong thời gian học CTĐT thứ hai, sinh viên phải luôn đảm bảo khối lượng học\ntập ngành thứ nhất theo quy định với điểm CPA từ trung bình trở lên và không nằm trong\ndiện bị cảnh báo học tập. Sinh viên không duy trì được kết quả này sẽ bị loại khỏi danh\nsách đăng ký học chương trình thứ hai."
+        },
+        {
+          "chunk_id": "65091e91-4394-548d-97d5-1d2a70f77b02",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "Điều 19. Cảnh báo học tập và buộc thôi học"
+        },
+        {
+          "chunk_id": "3f520c50-e758-5a75-8c43-6d5198a07842",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "a) Nâng một mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học\nkỳ lớn hơn 8."
+        },
+        {
+          "chunk_id": "0e74349b-4034-51cd-bb31-e553927a242d",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "b) Nâng hai mức cảnh báo học tập đối với sinh viên có số TC không đạt trong học kỳ\nlớn hơn 16 hoặc tự ý bỏ học, không đăng ký học tập."
+        },
+        {
+          "chunk_id": "33d2a7a4-ce93-515c-9f70-d9f244155983",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "c) Áp dụng cảnh báo học tập mức 3 đối với sinh viên có số TC nợ đọng từ đầu khóa\nlớn hơn 24."
+        },
+        {
+          "chunk_id": "9496b337-a910-5597-8fe7-19ad76f4ddbf",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "d) Sinh viên đang bị cảnh báo học tập mức 1 và mức 2, nếu số TC không đạt trong\nhọc kỳ nhỏ hơn hoặc bằng 4 thì được hạ một mức cảnh báo học tập."
+        },
+        {
+          "chunk_id": "16d71adb-1e05-5f71-9af8-e7ad5c2c1531",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "đ) Sinh viên đang bị cảnh báo học tập mức 3, nếu số TC nợ đọng từ đầu khóa nhỏ\nhơn hoặc bằng 24 thì được hạ cảnh báo học tập xuống mức 2. Việc hạ mức cảnh báo học\n15\ntập này không phụ thuộc vào điều kiện nâng mức cảnh báo học tập tại mục a và mục b\nkhoản này."
+        },
+        {
+          "chunk_id": "13819044-94e5-5a74-a8c6-748a2d580041",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "e) Không xét cảnh báo học tập với học kỳ hè."
+        },
+        {
+          "chunk_id": "60265022-8894-5c5c-bfb3-e7c6f1aff3f5",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "2. Hạn chế khối lượng học tập là hình thức buộc những sinh viên đang bị cảnh báo\nhọc tập từ mức 2 trở lên đăng ký số TC học phần ít hơn bình thường tại học kỳ 1 của năm\nhọc, cụ thể như sau:"
+        },
+        {
+          "chunk_id": "29b2001d-7056-5002-8e27-470403d2a0cf",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "a) Sinh viên bị cảnh báo học tập mức 3 lần thứ hai liên tiếp."
+        }
+      ]
+    },
+    {
+      "id": "Q18",
+      "expected_needle": "đủ điều kiện tốt nghiệp",
+      "match_count": 4,
+      "matched_documents": [
+        "RAW-HUST-5445"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "3abb2bfd-01ee-55ae-a33e-f4adf8d8c20a",
+        "73239671-087a-52e5-9435-d9ee6bdabb28",
+        "8d83c484-eaa0-5c0f-a554-ed09ee531dcd",
+        "986ae629-4db3-583f-b065-44d8c01ec2b7"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "73239671-087a-52e5-9435-d9ee6bdabb28",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "4. Những sinh viên đủ điều kiện tốt nghiệp được Giám đốc ĐHBK Hà Nội ra quyết\nđịnh công nhận tốt nghiệp và cấp bằng tốt nghiệp trong thời hạn 03 tháng tính từ thời điểm\nsinh viên đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ liên quan."
+        },
+        {
+          "chunk_id": "3abb2bfd-01ee-55ae-a33e-f4adf8d8c20a",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "5. Sinh viên đã hết thời gian học tập tối đa theo quy định tại khoản 3 Điều 3 của Quy\nchế này nhưng chưa đủ điều kiện tốt nghiệp do chưa hoàn thành các học phần Giáo dục\nquốc phòng-an ninh hoặc Giáo dục thể chất, trong thời hạn tối đa 03 năm kể từ khi hết thời\nhạn học tập được phép đăng ký học để hoàn thiện các học phần còn thiếu này và đề nghị\nxét công nhận tốt nghiệp."
+        },
+        {
+          "chunk_id": "986ae629-4db3-583f-b065-44d8c01ec2b7",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "4. Học viên đăng ký tốt nghiệp, đạt đủ điều kiện tốt nghiệp được Giám đốc ĐHBK\nHà Nội ra quyết định công nhận tốt nghiệp và cấp bằng tốt nghiệp trong thời hạn 03 tháng\ntính từ thời điểm đáp ứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ liên quan."
+        },
+        {
+          "chunk_id": "8d83c484-eaa0-5c0f-a554-ed09ee531dcd",
+          "document_number": "RAW-HUST-5445",
+          "excerpt": "3. Học viên đạt đủ điều kiện tốt nghiệp được Giám đốc ĐHBK Hà Nội ra quyết định\ncông nhận tốt nghiệp và cấp bằng tốt nghiệp trong thời hạn 02 tháng tính từ thời điểm đáp\nứng đầy đủ điều kiện tốt nghiệp và hoàn thành các nghĩa vụ liên quan."
+        }
+      ]
+    },
+    {
+      "id": "Q19",
+      "expected_needle": "kỹ sư chuyên sâu",
+      "match_count": 38,
+      "matched_documents": [
+        "RAW-HUST-10232",
+        "RAW-HUST-10714-table",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-5445",
+        "RAW-HUST-7737",
+        "RAW-HUST-956-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "1d7f0c1a-62d4-5bac-be8b-f2b843aa6623",
+        "4d615e02-48ca-554a-8824-5c9d8d56e4ce",
+        "70e7f8b0-11b6-55a1-af9e-d74454ad87ad",
+        "a2f8fd6e-aacd-59c8-9a06-bf55a2ee8d26",
+        "d895c93c-e117-5cc0-93a7-58c8a6aeccb8",
+        "f80d91ab-5e1e-5e06-8992-3dc57c3202ae"
+      ],
+      "labelled_chunk_ids_current": false
+    },
+    {
+      "id": "Q20",
+      "expected_needle": "TOEIC",
+      "match_count": 14,
+      "matched_documents": [
+        "RAW-HUCE-quy-che-chi-tieu-noi-bo",
+        "RAW-HUST-10728",
+        "RAW-HUST-119",
+        "RAW-HUST-2048-table"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "16a4ae2d-e5f5-553b-a03f-b512a4b5de78",
+        "4e91be86-c341-5bda-ac6a-dd2b32a1b173",
+        "775d049e-4f62-570c-8f1c-93aabad96a7e",
+        "8b10ec4c-335b-5c33-93dd-b40e2889f81b",
+        "e438caba-67d2-58e4-9aa9-2e0712d5059b"
+      ],
+      "labelled_chunk_ids_current": false,
+      "expected_document_excerpts": [
+        {
+          "chunk_id": "4e91be86-c341-5bda-ac6a-dd2b32a1b173",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "1. Bảng quy đổi tương đương các chứng chỉ tiếng Anh\nBậc cơ sở CEFR PEIC TOEIC\n2 kỹ năng\nTOEIC 4 kỹ năng TOEFL VSTEP IELTS\nAcademic\nAPTIS\nESOL\nCambridge English\nScale & Tests\n(KET, PET, FCE) NLNNVN* Nghe Đọc Nói Viết iBT iTP\nBậc 1\nBậc 1.1\nA1 Level\nA1\n<250 60÷80 60÷80 50÷60 30÷40 ≤ 10 ≤ 337 Không\ncó mức\ntương\nđương\n≤ 2.0 ≤ 45 100÷110 (KET)\nBậc 1.2 250÷345 85÷105 85÷110 70÷80 50÷60 11÷20 338÷360 2.5 46÷65 111÷119 (KET)\nBậc 2\nBậc 2.1\nA2 Level\n1\n350÷395 110÷150 115÷155 90 70÷80 21÷23 361÷400 3.0 66÷75 120÷129 (KET)\nBậc 2.2 400"
+        },
+        {
+          "chunk_id": "e438caba-67d2-58e4-9aa9-2e0712d5059b",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "2. Điều kiện xét quy đổi tương đương chứng chỉ\n+ Đối với chứng chỉ TOEIC 4 kỹ năng: quy đổi tương đương sang các chứng chỉ khác dựa theo theo kỹ năng đạt điểm thấp nhất.\n+ Sinh viên có chứng chỉ TOEIC 2 kỹ năng được công nhận để xét điều kiện chuẩn ngoại ngữ theo số lượng tín chỉ tích lũy, tuy nhiên\nkhông được công nhận để xét nhận Đồ án tốt nghiệp/Khóa luận tốt nghiệp, không được công nhận để xét tốt nghiệp.\n+ Các trường hợp quy đổi tương đương khác do Ban Đào tạo đề xuất và trình Giám đốc Đại học quyết định."
+        },
+        {
+          "chunk_id": "16a4ae2d-e5f5-553b-a03f-b512a4b5de78",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "| Bậc cơ sở |  | CEFR | PEIC | TOEIC 2 kỹ năng | TOEIC 4 kỹ năng |  |  |  | TOEFL |  | VSTEP | IELTS Academic | APTIS ESOL | Cambridge English Scale & Tests (KET, PET, FCE) |\n|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|\n| NLNNVN* |  |  |  |  | Nghe | Đọc | Nói | Viết | iBT | iTP |  |  |  |  |\n| Bậc 1 | Bậc 1.1 | A1 | Level A1 | <250 | 60÷80 | 60÷80 | 50÷60 | 30÷40 | ≤ 10 | ≤ 337 | Không có mức tương đương | ≤ 2.0 | ≤ 45 | 100÷110 (KET) |\n|  | Bậc 1.2 |  |  | 250÷34"
+        },
+        {
+          "chunk_id": "8b10ec4c-335b-5c33-93dd-b40e2889f81b",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "\nthứ tự từ 1÷2 trong Bảng 7.1\nDELF A1 hoặc đạt tất cả các học phần số\nthứ tự từ 1÷2 trong Bảng 7.2\nTừ 64 TC DELF A2 hoặc đạt tất cả các học phần số\nthứ tự từ 1÷4 trong Bảng 7.1\nDELF A2 hoặc đạt tất cả các học phần số\nthứ tự từ 1÷4 trong Bảng 7.2\nTừ 96 TC DELF B1 hoặc đạt tất cả các học phần số\nthứ tự từ 1÷6 trong Bảng 7.1\nDELF B1 hoặc đạt tất cả các học phần số\nthứ tự từ 1÷6 trong Bảng 7.2\nĐiều kiện xét nhận Đồ án tốt\nnghiệp cử nhân DELF B1 hoặc TOEIC 500\nĐiều kiện xét tốt nghiệp cử\nnhân DELF B1 và TOEIC 500\nĐiều kiện xét tốt nghiệp kỹ\nsư chuyên sâu đặc thù\nDELF B2 hoặc VSTEP tương ứng trình độ\nBậc 4 Không có\nĐiều kiện đăng ký nhận Phụ\nlục văn bằng kỹ sư của phía\nPháp.\nDELF B1 và TOEIC 600 Không có"
+        },
+        {
+          "chunk_id": "775d049e-4f62-570c-8f1c-93aabad96a7e",
+          "document_number": "RAW-HUST-2048-table",
+          "excerpt": "g 7.1 | DELF A1 hoặc đạt tất cả các học phần số thứ tự từ 1÷2 trong Bảng 7.2 |\n| Từ 64 TC | DELF A2 hoặc đạt tất cả các học phần số thứ tự từ 1÷4 trong Bảng 7.1 | DELF A2 hoặc đạt tất cả các học phần số thứ tự từ 1÷4 trong Bảng 7.2 |\n| Từ 96 TC | DELF B1 hoặc đạt tất cả các học phần số thứ tự từ 1÷6 trong Bảng 7.1 | DELF B1 hoặc đạt tất cả các học phần số thứ tự từ 1÷6 trong Bảng 7.2 |\n| Điều kiện xét nhận Đồ án tốt nghiệp cử nhân | DELF B1 hoặc TOEIC 500 |  |\n| Điều kiện xét tốt nghiệp cử nhân | DELF B1 và TOEIC 500 |  |\n| Điều kiện xét tốt nghiệp kỹ sư chuyên sâu đặc thù | DELF B2 hoặc VSTEP tương ứng trình độ Bậc 4 | Không có |\n| Điều kiện đăng ký nhận Phụ lục văn bằng kỹ sư của phía Pháp. | DELF B1 và TOEIC 600 | Không có |\n18\nBảng 7.4 Bảng quy đổi tương đương các chứng chỉ tiếng Pháp\nGhi chú: Chứng chỉ DELF được công nhận vô thời hạn; Chứng chỉ TCF được công nhận trong vòng 2 năm kể từ n"
+        }
+      ]
+    },
+    {
+      "id": "Q21",
+      "expected_needle": "Bậc 3",
+      "match_count": 19,
+      "matched_documents": [
+        "RAW-HUCE-quyet-dinh-ban-hanh-ugas",
+        "RAW-HUST-10728",
+        "RAW-HUST-2048-table",
+        "RAW-HUST-7737"
+      ],
+      "expected_document_present": true,
+      "current_expected_document_chunk_ids": [
+        "0a3972db-2250-536c-9ba6-27342117fcce",
+        "16a4ae2d-e5f5-553b-a03f-b512a4b5de78",
+        "4e91be86-c341-5bda-ac6a-dd2b32a1b173",
+        "55b391f1-373f-5e2d-9cf1-6bcf0d1a61c4",
+        "5f8abb49-c9f3-5d15-8a7f-ca87f5ec231d",
+        "7dc7c1ff-1bbd-5ed1-9864-5c6161dd68cd",
+        "8f7ecd93-76e9-51ee-9fe1-5197a5adffa5",
+        "92cd06b5-8aed-5aea-9ee5-df1d1ff0a8c1"
+      ],
+      "labelled_chunk_ids_current": false
+    }
+  ]
+}

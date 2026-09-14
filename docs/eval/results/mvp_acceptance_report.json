@@ -1,0 +1,168 @@
+{
+  "report_date": "2026-08-20",
+  "overall_status": "FAIL",
+  "definition_of_done_complete": false,
+  "commit": {
+    "base_commit_hash": "94895ffbfe1ce6f09a244a759a7220db550f6208",
+    "implementation_commit_hash": "6078b453a11215bb4af016786150e1e450eac4c7",
+    "implementation_changes_committed": true,
+    "working_tree_clean": false,
+    "unrelated_untracked_paths": [".review-dev-20260813/"]
+  },
+  "versions": {
+    "guardrail_policy": "guardrails-v1",
+    "retrieval_access_policy": "retrieval-access-v1",
+    "security_dataset": "guardrails-mvp-v1",
+    "quality_dataset": "rag-regression-v1"
+  },
+  "security_evaluation": {
+    "status": "PASS",
+    "attack_cases": 250,
+    "benign_cases": 100,
+    "attack_runs": 1250,
+    "benign_runs": 500,
+    "seeds": [17, 42, 101, 2026, 9871],
+    "attack_success_rate": 0.0,
+    "false_positive_rate": 0.0,
+    "critical_leakage_count": 0,
+    "cross_tenant_leakage_count": 0,
+    "pii_leakage_count": 0,
+    "abstention_correctness": 1.0,
+    "stable_across_seeds": true
+  },
+  "local_quality_evaluation": {
+    "status": "PASS",
+    "evaluator": "local_deterministic_extractive_v1",
+    "corpus": "synthetic_regression",
+    "infrastructure_profile": "docker",
+    "database_backend": "postgresql",
+    "vector_backend": "qdrant",
+    "cases": 7,
+    "answer_correctness": 0.8539080704051957,
+    "faithfulness": 1.0,
+    "context_precision": 0.7142857142857143,
+    "context_recall": 0.7142857142857143,
+    "citation_correctness": 1.0,
+    "citation_validation": 1.0,
+    "critical_abstention_correctness": 1.0,
+    "ragas_llm_judge_executed": false
+  },
+  "ragas_evaluation": {
+    "status": "FAIL",
+    "version": "0.3.9",
+    "offline_id_based": {
+      "status": "PASS",
+      "sample_count": 4,
+      "external_payload_sent": false,
+      "id_based_context_precision": 0.5416666666666666,
+      "id_based_context_recall": 1.0
+    },
+    "llm_judge": {
+      "status": "FAIL",
+      "executed": false,
+      "attempted": true,
+      "completed": false,
+      "destination": "openai",
+      "external_payload_attempted": true,
+      "reason": "OpenAI returned HTTP 401 invalid_api_key for the key loaded from .env; required RAGAS LLM-judge quality gates remain unverified."
+    }
+  },
+  "test_suites": [
+    {
+      "name": "metadata contract, ingestion and RBAC targeted",
+      "status": "PASS",
+      "result": "48 passed"
+    },
+    {
+      "name": "guardrail and five-seed security gate",
+      "status": "PASS",
+      "result": "67 passed"
+    },
+    {
+      "name": "evaluation unit tests",
+      "status": "PASS",
+      "result": "19 passed"
+    },
+    {
+      "name": "RAGAS adapter and data contract targeted",
+      "status": "PASS",
+      "result": "48 passed"
+    },
+    {
+      "name": "PostgreSQL/Qdrant metadata consistency targeted",
+      "status": "PASS",
+      "result": "45 passed"
+    },
+    {
+      "name": "full unit and integration suite",
+      "status": "PASS",
+      "result": "656 passed, 1 third-party warning"
+    },
+    {
+      "name": "PostgreSQL and Qdrant synthetic pipeline E2E",
+      "status": "PASS",
+      "result": "4 published documents, 6 chunks, 6 Qdrant points, 21 payload indexes and 7 evaluation cases completed."
+    },
+    {
+      "name": "local API E2E over PostgreSQL and Qdrant",
+      "status": "PASS",
+      "result": "Health and chat returned HTTP 200; sufficient evidence, one citation, high confidence, guardrail allow and zero warnings."
+    },
+    {
+      "name": "Alembic schema consistency",
+      "status": "FAIL",
+      "result": "Migration head declares documents.title VARCHAR(500) while the ORM declares String(2000)."
+    },
+    {
+      "name": "real PostgreSQL, Qdrant and approved HUST corpus E2E",
+      "status": "FAIL",
+      "result": "Docker services are healthy, but the current checkout has no data/raw/HUST corpus or approved HUST records; real-corpus run was not executed."
+    }
+  ],
+  "commands_run": [
+    ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_ingestion\\test_index_metadata_contract.py tests\\test_ingestion\\test_pipeline_flow.py tests\\test_rag\\test_policy_filter.py -q",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_rag\\test_guardrails.py tests\\test_evaluation\\test_security.py -q",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_guardrail_redteam.py",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_evaluation -q",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_rag_quality_eval.py",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_ragas_eval.py --mode offline-id",
+    ".\\.venv\\Scripts\\python.exe -m pytest tests\\test_evaluation\\test_ragas_adapter.py tests\\test_ingestion\\test_index_metadata_contract.py tests\\test_evaluation\\test_pipeline.py -q",
+    ".\\.venv\\Scripts\\python.exe -m pip check",
+    ".\\.venv\\Scripts\\python.exe -m ruff check src\\evaluation\\ragas_adapter.py scripts\\run_ragas_eval.py scripts\\run_rag_quality_eval.py tests\\test_evaluation\\test_ragas_adapter.py",
+    ".\\.venv\\Scripts\\python.exe -m pytest -q",
+    "docker compose up -d postgres qdrant",
+    "docker compose ps",
+    ".\\.venv\\Scripts\\python.exe -m alembic upgrade head",
+    ".\\.venv\\Scripts\\python.exe -m alembic check",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_rag_quality_eval.py --profile docker",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_ragas_eval.py --mode llm-judge --provider openai",
+    ".\\.venv\\Scripts\\python.exe scripts\\run_ragas_eval.py --mode offline-id",
+    ".\\.venv\\Scripts\\python.exe -m uvicorn src.main:app --host 127.0.0.1 --port 8011",
+    "git commit -m \"feat: harden RAG guardrails and evaluation\""
+  ],
+  "verified_controls": {
+    "cross_tenant_citation_leakage": 0,
+    "incomplete_acl_citation_acceptance": 0,
+    "response_envelope_leakage": 0,
+    "completed_request_runtime_state_retained": 0,
+    "pending_runtime_state_bounded": true,
+    "postgres_qdrant_mismatch_retrieved": 0
+  },
+  "limitations": [
+    "The passing quality numbers use real local PostgreSQL/Qdrant but a seven-case synthetic regression corpus, hash embeddings, lexical reranking and the template generator.",
+    "RAGAS ID-based context metrics were measured offline, but RAGAS LLM-judge faithfulness, answer correctness, context precision and context recall remain unmeasured because OpenAI rejected the configured key with HTTP 401 invalid_api_key; the RAGAS acceptance gate is failed.",
+    "Real PostgreSQL and Qdrant synthetic/API E2E passed, but approved HUST corpus E2E was not measured because the corpus is absent from the checkout.",
+    "Alembic check reports migration/model drift for documents.title: VARCHAR(500) versus String(2000).",
+    "The implementation evidence is pinned to commit 6078b453a11215bb4af016786150e1e450eac4c7; the acceptance report is recorded in the following documentation commit.",
+    "Context precision and context recall are 0.7142857142857143 on the local regression evaluation and have no explicit MVP threshold in the requested gate."
+  ],
+  "post_mvp_backlog": [
+    "Redis distributed rate limiter",
+    "PostgreSQL checkpointer across workers",
+    "Online semantic injection classifier",
+    "Advanced DLP",
+    "Claim-level entailment runtime",
+    "Full multi-worker testing",
+    "Full load and stress testing"
+  ]
+}

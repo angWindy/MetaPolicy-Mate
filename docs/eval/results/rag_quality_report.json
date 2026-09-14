@@ -1,0 +1,192 @@
+{
+  "dataset": "docs\\eval\\datasets\\golden_questions.regression.jsonl",
+  "dataset_version": "rag-regression-v1",
+  "dataset_cases": 7,
+  "infrastructure_profile": "docker",
+  "database_backend": "postgresql",
+  "evaluator": "local_deterministic_extractive_v1",
+  "ragas_llm_judge_executed": false,
+  "seed_summary": {
+    "dataset_kind": "synthetic_regression",
+    "documents": 4,
+    "chunks": 6,
+    "vector_backend": "qdrant",
+    "collection": "hust-regulations-eval-v1"
+  },
+  "metrics": {
+    "answer_correctness": 0.8539080704051957,
+    "faithfulness": 1.0,
+    "context_precision": 0.7142857142857143,
+    "context_recall": 0.7142857142857143,
+    "citation_correctness": 1.0,
+    "citation_validation": 1.0,
+    "critical_abstention_correctness": 1.0
+  },
+  "gate": {
+    "status": "PASS",
+    "checks": {
+      "faithfulness_gte_0_85": true,
+      "answer_correctness_gte_0_75": true,
+      "citation_validation_100pct": true,
+      "critical_abstention_100pct": true
+    }
+  },
+  "cases": [
+    {
+      "category": "department_retrieval",
+      "should_abstain": false,
+      "retrieved_chunk_ids": [
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "final_context_ids": [
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111303",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [
+        "11111111-1111-4111-8111-111111111302"
+      ],
+      "outcome": "generated",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [],
+      "answer": "Theo EVAL-LEAVE-2026, Điều 2, trang 1: Điều 2. Trưởng đơn vị xem xét và phê duyệt đề nghị nghỉ phép.",
+      "answer_correctness": 0.7058823529411764,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    },
+    {
+      "category": "exact_answer",
+      "should_abstain": false,
+      "retrieved_chunk_ids": [
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111302",
+        "11111111-1111-4111-8111-111111111301",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "final_context_ids": [
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111302",
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "outcome": "generated",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [],
+      "answer": "Theo EVAL-LEAVE-2026, Điều 3, trang 1: Điều 3. Đề nghị nghỉ phép phải được gửi trước ít nhất 05 ngày làm việc.",
+      "answer_correctness": 0.7368421052631579,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    },
+    {
+      "category": "identifier",
+      "should_abstain": false,
+      "retrieved_chunk_ids": [
+        "11111111-1111-4111-8111-111111111301",
+        "11111111-1111-4111-8111-111111111303",
+        "11111111-1111-4111-8111-111111111302"
+      ],
+      "final_context_ids": [
+        "11111111-1111-4111-8111-111111111301",
+        "11111111-1111-4111-8111-111111111303"
+      ],
+      "citation_chunk_ids": [
+        "11111111-1111-4111-8111-111111111301"
+      ],
+      "outcome": "generated",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [],
+      "answer": "Theo EVAL-LEAVE-2026, Điều 1, trang 1: Điều 1. Cán bộ thuộc đơn vị được nghỉ phép năm theo kế hoạch đã được phê duyệt.",
+      "answer_correctness": 0.761904761904762,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    },
+    {
+      "category": "public_retrieval",
+      "should_abstain": false,
+      "retrieved_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "final_context_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "outcome": "generated",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [],
+      "answer": "Theo EVAL-PUBLIC-2026, Điều 1, trang 1: Điều 1. Quy định EVAL-PUBLIC-2026 áp dụng cho toàn thể người học và cán bộ của trường.",
+      "answer_correctness": 0.7727272727272727,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    },
+    {
+      "category": "unauthorized",
+      "should_abstain": true,
+      "retrieved_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "final_context_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [],
+      "outcome": "abstained",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [
+        "status=partial; top_score=0.1; score_gap=inf; independent_sources=1; citation_metadata=complete; versions=current; evidence is incomplete; generation is disabled"
+      ],
+      "answer": "Tôi chưa có đủ căn cứ để kết luận.",
+      "answer_correctness": 1.0,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    },
+    {
+      "category": "out_of_domain",
+      "should_abstain": true,
+      "retrieved_chunk_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "final_context_ids": [
+        "22222222-2222-4222-8222-222222222301"
+      ],
+      "citation_chunk_ids": [],
+      "outcome": "abstained",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [
+        "status=weak; top_score=0.0; score_gap=inf; independent_sources=1; citation_metadata=complete; versions=current; retry=1/2"
+      ],
+      "answer": "Tôi chưa có đủ căn cứ để kết luận.",
+      "answer_correctness": 1.0,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    },
+    {
+      "category": "expired_version",
+      "should_abstain": true,
+      "retrieved_chunk_ids": [],
+      "final_context_ids": [],
+      "citation_chunk_ids": [],
+      "outcome": "abstained",
+      "error_code": "",
+      "guardrail_reason_codes": [],
+      "warnings": [
+        "status=not_found; top_score=unavailable; score_gap=unavailable; independent_sources=0; citation_metadata=incomplete; versions=not_current_or_unknown; no evidence is available; generation is disabled"
+      ],
+      "answer": "Tôi chưa có đủ căn cứ để kết luận.",
+      "answer_correctness": 1.0,
+      "faithfulness": 1.0,
+      "behavior_correct": true
+    }
+  ]
+}

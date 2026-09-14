@@ -1,0 +1,10 @@
+.card { display: flex; min-width: 0; flex-direction: column; gap: 14px; padding: 20px; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: #fff; box-shadow: var(--shadow-card); }
+.header { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+.label { margin: 0; color: var(--color-text-muted); font-size: 13px; font-weight: 600; }
+.icon { display: grid; width: 36px; height: 36px; flex: 0 0 36px; place-items: center; border-radius: var(--radius-control); background: var(--color-primary-soft); color: var(--color-primary); }
+.value { margin: 0; color: var(--color-text); font-size: 28px; font-weight: 700; line-height: 1.1; }
+.footer { display: flex; align-items: center; gap: 8px; color: var(--color-text-muted); font-size: 12px; }
+.trend { font-weight: 700; }
+.positive { color: var(--color-success); }
+.negative { color: var(--color-error); }
+.neutral { color: var(--color-text-muted); }

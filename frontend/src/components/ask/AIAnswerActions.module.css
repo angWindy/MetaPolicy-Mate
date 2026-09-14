@@ -1,0 +1,134 @@
+.wrapper {
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--color-border);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  cursor: pointer;
+  padding: 7px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: 9px;
+  background: var(--color-card);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.actions button[aria-pressed="true"] {
+  border-color: color-mix(in srgb, var(--color-primary) 35%, white);
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.actions button:disabled {
+  cursor: default;
+  opacity: .68;
+}
+
+.actions button:hover {
+  border-color: color-mix(in srgb, var(--color-primary) 30%, white);
+  background: var(--color-background);
+  color: var(--color-primary);
+}
+
+.actions button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-primary) 35%, white);
+  outline-offset: 2px;
+}
+
+.wrapper p {
+  margin: 9px 0 0;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.wrapper p.error {
+  color: var(--color-error);
+}
+
+.reportForm {
+  display: grid;
+  gap: 9px;
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-muted);
+}
+
+.reportForm label {
+  color: var(--color-text-secondary);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reportForm label span {
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+.reportForm textarea {
+  width: 100%;
+  min-height: 82px;
+  resize: vertical;
+  padding: 10px 11px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background: var(--color-card);
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.reportForm textarea:focus-visible {
+  border-color: var(--color-primary);
+  outline: 0;
+  box-shadow: var(--focus-ring);
+}
+
+.reportForm > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.reportForm button {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 0 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-card);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.reportForm .reportSubmit {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: white;
+}
+
+@media (max-width: 480px) {
+  .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .actions button { justify-content: center; }
+  .reportForm > div { display: grid; grid-template-columns: 1fr 1fr; }
+}
+

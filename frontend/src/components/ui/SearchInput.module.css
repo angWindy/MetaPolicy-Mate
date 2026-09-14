@@ -1,0 +1,8 @@
+.wrapper { display: flex; min-height: 42px; align-items: center; gap: 9px; padding: 0 12px; border: 1px solid var(--color-border); border-radius: var(--radius-control); background: #fff; color: var(--color-text-muted); transition: border-color 140ms ease, box-shadow 140ms ease; }
+.wrapper:focus-within { border-color: var(--color-primary); box-shadow: var(--focus-ring); }
+.input { width: 100%; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--color-text); font-size: 14px; }
+.input::placeholder { color: var(--color-text-subtle); opacity: 1; }
+.icon { display: grid; flex: 0 0 auto; place-items: center; }
+.clear { display: grid; width: 28px; height: 28px; flex: 0 0 28px; cursor: pointer; place-items: center; border: 0; border-radius: var(--radius-small); background: transparent; color: var(--color-text-muted); font-size: 18px; }
+.clear:hover { background: var(--color-surface-muted); color: var(--color-text); }
+.disabled { background: var(--color-surface-muted); opacity: 0.7; }

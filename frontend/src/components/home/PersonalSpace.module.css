@@ -1,0 +1,9 @@
+.space { min-width: 0; padding: 18px; }
+.space > h2 { margin: 0 0 14px; font-size: 19px; }
+.group { padding: 14px 0; border-top: 1px solid var(--color-border); }
+.group h3 { display: flex; align-items: center; gap: 7px; margin: 0 0 10px; color: var(--color-text-secondary); font-size: 12px; }
+.group h3 svg { color: var(--color-primary); }
+.group a { display: grid; align-items: center; gap: 10px; padding: 9px 0; color: var(--color-text-secondary); grid-template-columns: auto minmax(0,1fr) auto; text-decoration: none; }
+.group a > svg:first-child { color: var(--color-text-muted); }.group a > svg:last-child { color: var(--color-text-subtle); }
+.group a span, .group a strong, .group a small { display: block; }.group a strong { font-size: 12px; }.group a small { margin-top: 3px; color: var(--color-text-muted); font-size: 10px; }
+.group a:hover strong, .group a:hover > svg:last-child { color: var(--color-primary); }

@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-03T08:28:34.0805521Z",
+  "title": "Design System: PolicyMate AI",
+  "extensions": {
+    "colorMeta": {
+      "primary": {
+        "role": "primary",
+        "displayName": "Academic HUST Red",
+        "tonalRamp": ["#3f070a", "#650a0f", "#8b0e15", "#b5121b", "#d43c45", "#e77b82", "#f3b7bb", "#fff1f2"]
+      },
+      "primary-hover": {
+        "role": "primary",
+        "displayName": "Deep Academic Red",
+        "tonalRamp": ["#3f070a", "#650a0f", "#8b0e15", "#b5121b", "#d43c45", "#e77b82", "#f3b7bb", "#fff1f2"]
+      },
+      "primary-active": {
+        "role": "primary",
+        "displayName": "Seal Red",
+        "tonalRamp": ["#3f070a", "#650a0f", "#8b0e15", "#b5121b", "#d43c45", "#e77b82", "#f3b7bb", "#fff1f2"]
+      },
+      "primary-soft": {
+        "role": "primary",
+        "displayName": "Blush Paper",
+        "tonalRamp": ["#3f070a", "#650a0f", "#8b0e15", "#b5121b", "#d43c45", "#e77b82", "#f3b7bb", "#fff1f2"]
+      },
+      "background": {
+        "role": "neutral",
+        "displayName": "Archive Canvas",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "card": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#ffffff"]
+      },
+      "text": {
+        "role": "neutral",
+        "displayName": "Institutional Ink",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "text-secondary": {
+        "role": "neutral",
+        "displayName": "Slate Copy",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "text-muted": {
+        "role": "neutral",
+        "displayName": "Evidence Gray",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "text-subtle": {
+        "role": "neutral",
+        "displayName": "Quiet Gray",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "border": {
+        "role": "neutral",
+        "displayName": "Hairline Slate",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "border-strong": {
+        "role": "neutral",
+        "displayName": "Structural Slate",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "surface-muted": {
+        "role": "neutral",
+        "displayName": "Cool Desk",
+        "tonalRamp": ["#101828", "#1d2939", "#344054", "#667085", "#98a2b3", "#d0d7e5", "#e4e9f2", "#f7f9fc"]
+      },
+      "success": {
+        "role": "secondary",
+        "displayName": "Verified Green",
+        "tonalRamp": ["#032d1a", "#054c2c", "#087443", "#159563", "#47b881", "#89d8ad", "#c5eed8", "#ecfdf3"]
+      },
+      "success-soft": {
+        "role": "secondary",
+        "displayName": "Verified Mist",
+        "tonalRamp": ["#032d1a", "#054c2c", "#087443", "#159563", "#47b881", "#89d8ad", "#c5eed8", "#ecfdf3"]
+      },
+      "warning": {
+        "role": "secondary",
+        "displayName": "Review Amber",
+        "tonalRamp": ["#451a03", "#713307", "#934508", "#b54708", "#dc6803", "#f79009", "#fec84b", "#fffaeb"]
+      },
+      "warning-soft": {
+        "role": "secondary",
+        "displayName": "Review Mist",
+        "tonalRamp": ["#451a03", "#713307", "#934508", "#b54708", "#dc6803", "#f79009", "#fec84b", "#fffaeb"]
+      },
+      "error": {
+        "role": "secondary",
+        "displayName": "Critical Red",
+        "tonalRamp": ["#45120e", "#721c15", "#912018", "#b42318", "#d92d20", "#f97066", "#fda29b", "#fef3f2"]
+      },
+      "error-soft": {
+        "role": "secondary",
+        "displayName": "Critical Mist",
+        "tonalRamp": ["#45120e", "#721c15", "#912018", "#b42318", "#d92d20", "#f97066", "#fda29b", "#fef3f2"]
+      },
+      "info": {
+        "role": "secondary",
+        "displayName": "Reference Blue",
+        "tonalRamp": ["#102a56", "#123f88", "#175cd3", "#2970ff", "#53b1fd", "#84caff", "#b2ddff", "#eff8ff"]
+      },
+      "info-soft": {
+        "role": "secondary",
+        "displayName": "Reference Mist",
+        "tonalRamp": ["#102a56", "#123f88", "#175cd3", "#2970ff", "#53b1fd", "#84caff", "#b2ddff", "#eff8ff"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Home welcome statements and the rare highest-level product message." },
+      "headline": { "displayName": "Headline", "purpose": "Page, document, and admin work-area titles." },
+      "title": { "displayName": "Title", "purpose": "Panel, answer, and grouped-content titles." },
+      "body": { "displayName": "Body", "purpose": "Answers, instructions, and sustained evidence reading." },
+      "label": { "displayName": "Label", "purpose": "Fields, status, table headers, and operational metadata." },
+      "control": { "displayName": "Control", "purpose": "Buttons and compact action text." }
+    },
+    "shadows": [
+      { "name": "card-ambient", "value": "0 1px 2px rgb(16 24 40 / 3%), 0 8px 24px rgb(16 24 40 / 5%)", "purpose": "Quiet separation for cards, metrics, and answer surfaces." },
+      { "name": "card-lift", "value": "0 16px 36px rgb(36 63 108 / 11%)", "purpose": "Hover or emphasized-card lift, used sparingly." },
+      { "name": "overlay-lift", "value": "0 24px 64px rgb(15 23 42 / 18%)", "purpose": "Menus, drawers, dialogs, and other temporary layers." },
+      { "name": "focus-ring", "value": "0 0 0 4px rgb(181 18 27 / 13%)", "purpose": "Focus-within treatment for fields and grouped controls in authenticated shells." }
+    ],
+    "motion": [
+      { "name": "control-state", "value": "140ms ease", "purpose": "Default button, border, text, and input-state transitions." },
+      { "name": "navigation-state", "value": "160ms ease", "purpose": "Navigation background and color changes." },
+      { "name": "drawer-state", "value": "200ms ease", "purpose": "Off-canvas navigation transform and visibility." },
+      { "name": "standard-ease", "value": "cubic-bezier(.2, .8, .2, 1)", "purpose": "Global interaction easing for links and buttons." },
+      { "name": "reduced-motion", "value": "0.01ms", "purpose": "Near-instant fallback applied to animation and transitions when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "narrow", "value": "640px" },
+      { "name": "compact-header", "value": "760px" },
+      { "name": "shell-collapse", "value": "900px" },
+      { "name": "answer-collapse", "value": "980px" },
+      { "name": "admin-density", "value": "1080px" },
+      { "name": "wide-dashboard", "value": "1320px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The decisive action for authentication, search, upload, and governance workflows.",
+      "html": "<button class=\"ds-btn-primary\" type=\"button\">Open official source</button>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:40px; align-items:center; justify-content:center; gap:8px; padding:0 16px; border:1px solid transparent; border-radius:var(--radius-control); background:var(--color-primary); color:#fff; font:600 14px/1 inherit; cursor:pointer; transition:background-color 140ms ease, transform 80ms ease; } .ds-btn-primary:hover { background:var(--color-primary-hover); } .ds-btn-primary:focus-visible { outline:2px solid var(--color-primary); outline-offset:3px; } .ds-btn-primary:active { transform:translateY(1px); } .ds-btn-primary:disabled { cursor:not-allowed; opacity:.55; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "A bordered supporting action for cancel, download, or alternate navigation.",
+      "html": "<button class=\"ds-btn-secondary\" type=\"button\">Download PDF</button>",
+      "css": ".ds-btn-secondary { display:inline-flex; min-height:40px; align-items:center; justify-content:center; gap:8px; padding:0 16px; border:1px solid var(--color-border-strong); border-radius:var(--radius-control); background:#fff; color:var(--color-text); font:600 14px/1 inherit; cursor:pointer; transition:background-color 140ms ease, border-color 140ms ease, transform 80ms ease; } .ds-btn-secondary:hover { background:var(--color-background); } .ds-btn-secondary:focus-visible { outline:2px solid var(--color-primary); outline-offset:3px; } .ds-btn-secondary:active { transform:translateY(1px); }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "A low-emphasis action inside cards, rows, and compact toolbars.",
+      "html": "<button class=\"ds-btn-ghost\" type=\"button\">View details</button>",
+      "css": ".ds-btn-ghost { display:inline-flex; min-height:40px; align-items:center; justify-content:center; gap:8px; padding:0 16px; border:1px solid transparent; border-radius:var(--radius-control); background:transparent; color:var(--color-text-secondary); font:600 14px/1 inherit; cursor:pointer; transition:background-color 140ms ease, color 140ms ease; } .ds-btn-ghost:hover { background:var(--color-surface-muted); color:var(--color-text); } .ds-btn-ghost:focus-visible { outline:2px solid var(--color-primary); outline-offset:3px; } .ds-btn-ghost:active { transform:translateY(1px); }"
+    },
+    {
+      "name": "Danger Button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "A clearly destructive action reserved for irreversible governance operations.",
+      "html": "<button class=\"ds-btn-danger\" type=\"button\">Delete document</button>",
+      "css": ".ds-btn-danger { display:inline-flex; min-height:40px; align-items:center; justify-content:center; gap:8px; padding:0 16px; border:1px solid transparent; border-radius:var(--radius-control); background:var(--color-error); color:#fff; font:600 14px/1 inherit; cursor:pointer; transition:background-color 140ms ease, transform 80ms ease; } .ds-btn-danger:hover { background:#991b1b; } .ds-btn-danger:focus-visible { outline:2px solid var(--color-error); outline-offset:3px; } .ds-btn-danger:active { transform:translateY(1px); }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "search-field",
+      "description": "A border-led search control for policies, documents, and administration lists.",
+      "html": "<label class=\"ds-search\"><span class=\"ds-sr-only\">Search policies</span><svg viewBox=\"0 0 24 24\" width=\"18\" height=\"18\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" aria-hidden=\"true\"><circle cx=\"11\" cy=\"11\" r=\"8\"></circle><path d=\"m21 21-4.3-4.3\"></path></svg><input type=\"search\" placeholder=\"Search official documents\"></label>",
+      "css": ".ds-search { display:flex; min-height:42px; align-items:center; gap:9px; padding:0 12px; border:1px solid var(--color-border); border-radius:var(--radius-control); background:#fff; color:var(--color-text-muted); transition:border-color 140ms ease, box-shadow 140ms ease; } .ds-search:focus-within { border-color:var(--color-primary); box-shadow:0 0 0 4px rgb(181 18 27 / 13%); } .ds-search input { width:100%; min-width:0; border:0; outline:0; background:transparent; color:var(--color-text); font:400 14px/1.6 inherit; } .ds-search input::placeholder { color:var(--color-text-subtle); } .ds-sr-only { position:absolute; width:1px; height:1px; overflow:hidden; margin:-1px; clip:rect(0,0,0,0); white-space:nowrap; }"
+    },
+    {
+      "name": "Verified Status",
+      "kind": "chip",
+      "refersTo": "status-success",
+      "description": "A text-plus-dot status for current, active, reviewed, or successful records.",
+      "html": "<span class=\"ds-status-success\"><span aria-hidden=\"true\"></span>Current</span>",
+      "css": ".ds-status-success { display:inline-flex; min-height:24px; align-items:center; gap:6px; padding:3px 9px; border:1px solid #bbf7d0; border-radius:999px; background:var(--color-success-soft); color:var(--color-success); font:600 12px/1.3 inherit; white-space:nowrap; } .ds-status-success > span { width:6px; height:6px; border-radius:50%; background:currentColor; }"
+    },
+    {
+      "name": "Document Card",
+      "kind": "card",
+      "refersTo": "document-card",
+      "description": "A compact official-document summary with status and version context.",
+      "html": "<article class=\"ds-document-card\"><span class=\"ds-document-icon\"><svg viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z\"></path><polyline points=\"14 2 14 8 20 8\"></polyline></svg></span><div><div class=\"ds-document-heading\"><strong>Academic regulation 2026</strong><span>Current</span></div><p>QĐ-2026 · Version 3</p><small>Effective 01/09/2026</small></div></article>",
+      "css": ".ds-document-card { display:grid; min-width:0; grid-template-columns:auto minmax(0,1fr); gap:16px; align-items:start; padding:20px; border:1px solid var(--color-border); border-radius:var(--radius-card); background:#fff; color:var(--color-text); transition:border-color 140ms ease, box-shadow 140ms ease; } .ds-document-card:hover { border-color:var(--color-border-strong); box-shadow:0 1px 2px rgb(16 24 40 / 3%), 0 8px 24px rgb(16 24 40 / 5%); } .ds-document-icon { display:grid; width:42px; height:42px; place-items:center; border-radius:var(--radius-control); background:var(--color-primary-soft); color:var(--color-primary); } .ds-document-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:10px; } .ds-document-heading strong { font-size:15px; line-height:1.45; } .ds-document-heading span { padding:4px 7px; border-radius:999px; background:var(--color-success-soft); color:var(--color-success); font-size:10px; font-weight:600; white-space:nowrap; } .ds-document-card p,.ds-document-card small { display:block; margin:6px 0 0; color:var(--color-text-muted); font-size:12px; }"
+    },
+    {
+      "name": "Source Citation",
+      "kind": "custom",
+      "refersTo": "citation-card",
+      "description": "The signature evidence object linking an answer to an inspectable official source.",
+      "html": "<a class=\"ds-citation\" href=\"#\"><span class=\"ds-citation-topline\"><b>ACADEMIC REGULATION</b><em>Current</em></span><strong>Rules for undergraduate assessment</strong><dl><div><dt>Reference</dt><dd>Article 12</dd></div><div><dt>Version</dt><dd>v3 · Page 18</dd></div></dl><p>Open the cited passage in the official document.</p></a>",
+      "css": ".ds-citation { display:flex; min-width:0; flex-direction:column; gap:7px; padding:14px; border:1px solid var(--color-border); border-radius:12px; background:#fff; color:var(--color-text); text-decoration:none; transition:border-color 150ms ease, background-color 150ms ease; } .ds-citation:hover { border-color:color-mix(in srgb,var(--color-primary) 30%,white); background:var(--color-background); } .ds-citation:focus-visible { outline:3px solid color-mix(in srgb,var(--color-primary) 35%,white); outline-offset:2px; } .ds-citation-topline { display:flex; align-items:center; justify-content:space-between; gap:8px; } .ds-citation-topline b { color:var(--color-primary); font-size:10px; letter-spacing:.04em; } .ds-citation-topline em { padding:4px 7px; border-radius:999px; background:var(--color-success-soft); color:var(--color-success); font-size:9px; font-style:normal; font-weight:600; } .ds-citation > strong { font-size:13px; line-height:1.4; } .ds-citation dl { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:8px; margin:2px 0 0; } .ds-citation dt,.ds-citation dd { margin:0; font-size:10px; line-height:1.4; } .ds-citation dt { color:var(--color-text-muted); } .ds-citation dd { color:var(--color-text); font-weight:500; } .ds-citation p { margin:4px 0 0; color:var(--color-primary); font-size:11px; font-weight:700; }"
+    },
+    {
+      "name": "Active Navigation Item",
+      "kind": "nav",
+      "refersTo": "navigation-item",
+      "description": "The selected location in the desktop academic workspace.",
+      "html": "<a class=\"ds-nav-item\" href=\"#\" aria-current=\"page\"><svg viewBox=\"0 0 24 24\" width=\"19\" height=\"19\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" aria-hidden=\"true\"><path d=\"m3 11 9-9 9 9\"></path><path d=\"M5 10v10h14V10\"></path><path d=\"M9 20v-6h6v6\"></path></svg><span>Workspace overview</span></a>",
+      "css": ".ds-nav-item { display:grid; position:relative; min-height:46px; align-items:center; gap:11px; padding:0 12px; border-radius:var(--radius-control); background:var(--color-primary-soft); color:var(--color-primary); font-size:13px; font-weight:700; grid-template-columns:22px minmax(0,1fr); text-decoration:none; box-shadow:inset 3px 0 0 var(--color-primary); transition:background 160ms ease,color 160ms ease; } .ds-nav-item:hover { background:color-mix(in srgb,var(--color-primary) 11%,white); } .ds-nav-item:focus-visible { outline:3px solid color-mix(in srgb,var(--color-primary) 24%,transparent); outline-offset:2px; }"
+    },
+    {
+      "name": "Governance Data Table",
+      "kind": "custom",
+      "refersTo": "data-table",
+      "description": "A compact, horizontally resilient table for documents, people, and permissions.",
+      "html": "<div class=\"ds-table-wrap\"><table class=\"ds-table\"><thead><tr><th>Document</th><th>Version</th><th>Status</th></tr></thead><tbody><tr><td>Academic regulation</td><td>v3</td><td><span>Current</span></td></tr><tr><td>Scholarship policy</td><td>v2</td><td><span>Current</span></td></tr></tbody></table></div>",
+      "css": ".ds-table-wrap { width:100%; overflow-x:auto; border:1px solid var(--color-border); border-radius:var(--radius-card); background:#fff; } .ds-table { width:100%; min-width:560px; border-collapse:collapse; color:var(--color-text-secondary); font-size:14px; font-variant-numeric:tabular-nums; } .ds-table th { padding:11px 16px; border-bottom:1px solid var(--color-border); background:var(--color-background); color:var(--color-text-muted); font-size:12px; font-weight:650; text-align:left; white-space:nowrap; } .ds-table td { padding:14px 16px; border-bottom:1px solid var(--color-border); } .ds-table tr:last-child td { border-bottom:0; } .ds-table tbody tr:hover { background:#fbfdff; } .ds-table td span { display:inline-flex; padding:3px 9px; border:1px solid #bbf7d0; border-radius:999px; background:var(--color-success-soft); color:var(--color-success); font-size:12px; font-weight:600; } .ds-table:focus-visible { outline:2px solid var(--color-primary); outline-offset:3px; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Verified Academic Desk",
+    "overview": "The Verified Academic Desk treats PolicyMate AI as an institutional workspace: calm, document-led, and explicit about evidence. Academic red identifies decisive actions, active navigation, and institutional anchors; paper white and slate neutrals carry the reading work.\n\nDensity adapts to the job. Student flows keep a spacious task-first foreground, while admin views become compact enough for tables and governance without compressing labels or status context. The product narrative moves from authentication, to cited search and answers, to official PDF inspection, then to version, access, and RBAC administration.\n\nDepth is light and border-led. Motion is brief and functional, Lucide line icons clarify actions, and every important status remains readable without relying on color alone.",
+    "keyCharacteristics": [
+      "Academic red is reserved for identity, primary actions, focus, and active state.",
+      "Paper-white surfaces sit on a cool archive canvas with slate typography.",
+      "Citations, validity, version, and access state stay adjacent to the content they qualify.",
+      "Student surfaces breathe; admin surfaces use compact, scannable rows and tables.",
+      "Lucide line icons reinforce function without becoming decoration."
+    ],
+    "rules": [
+      { "name": "The Academic Red Rule", "body": "HUST red marks identity, primary actions, focus, and selected state; status semantics keep their own verified green, review amber, error red, or reference blue.", "section": "colors" },
+      { "name": "The Evidence Color Rule", "body": "Validity and workflow colors always appear with a label or icon; color is never the only carrier of state.", "section": "colors" },
+      { "name": "The Document First Rule", "body": "Headlines are compact and decisive; body copy stays readable, while operational metadata uses smaller labels without hiding version, issuer, or effective date.", "section": "typography" },
+      { "name": "The Task-First Viewport Rule", "body": "Keep the current question, answer, document, or governance task visible before secondary material; collapse columns instead of squeezing them.", "section": "layout" },
+      { "name": "The Border Before Shadow Rule", "body": "Use a 1px border as the default surface boundary; reserve stronger shadows for overlays, hover lift, and signature showcase moments.", "section": "elevation" },
+      { "name": "The Soft Utility Rule", "body": "Use 9–10px corners for controls, 12–14px for cards and panels, and full pills only for status or compact tags.", "section": "shapes" },
+      { "name": "The Citation Is Navigation Rule", "body": "Citation cards must expose document type, validity, reference, version/page context, and an affordance to open the official source.", "section": "components" }
+    ],
+    "dos": [
+      "Do use Academic HUST Red for identity, primary actions, focus, and active navigation.",
+      "Do keep citations, document version, validity, issuer, and effective date beside the answer or source they qualify.",
+      "Do use 1px slate borders and paper-white surfaces as the default hierarchy before adding shadow.",
+      "Do collapse multi-column layouts at their observed breakpoints and preserve 44px touch targets where the build already provides them.",
+      "Do pair Lucide icons with text or accessible names and honor reduced-motion preferences."
+    ],
+    "donts": [
+      "Don't introduce gradients or heavy glass as a recurring identity device; the build's isolated showcase and loading effects are exceptions, not system primitives.",
+      "Don't replace Academic HUST Red with the blue literals that remain in the legacy `/student` route or one-off admin accents.",
+      "Don't turn compact admin labels into unlabeled icon-only controls or color-only status.",
+      "Don't stack cards inside cards when a divider, row, or two-column layout keeps evidence relationships clearer.",
+      "Don't use pill radii for general cards, fields, or buttons."
+    ]
+  }
+}

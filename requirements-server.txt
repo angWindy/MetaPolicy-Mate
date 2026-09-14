@@ -1,0 +1,55 @@
+# Server deployment deps: CRUD API + RAG API + Qdrant client.
+# Drops: sentence-transformers, torch, transformers, easyocr, paddleocr,
+# docling, pymupdf, opencv, pdfplumber (in favour of pypdf only). Embeddings
+# are computed via OpenAI API. Local OCR/PDF ingestion is disabled - admin
+# uploads handled by direct PDF storage. Image-only cells are surfaced as
+# empty text. See docs/PDF_PROCESSING.md.
+
+# API and configuration
+fastapi>=0.115,<1
+uvicorn[standard]>=0.34,<1
+pydantic>=2.10,<3
+pydantic-settings>=2.7,<3
+python-dotenv>=1,<2
+python-multipart>=0.0.20,<1
+httpx>=0.28,<1
+
+# Database (clean-arch uses tenant Postgres / Neon remote)
+SQLAlchemy>=2,<3
+alembic>=1.14,<2
+psycopg[binary]>=3.2,<4
+psycopg-binary>=3.2,<4
+
+# Vector store client (Qdrant HTTP API only - no local model)
+qdrant-client>=1.13,<2
+
+# RAG orchestration: langchain-core only (no heavy chains)
+langchain-core>=0.3,<2
+langgraph>=0.2,<2
+langchain-openai>=0.3,<2
+
+# LLM providers (HTTP only - no local models)
+openai>=1,<3
+
+# Document parsing: pypdf + python-docx
+pypdf>=5,<7
+python-docx>=1.1,<2
+
+# Cache / sessions
+redis>=5.0.0
+
+# Auth
+PyJWT
+bcrypt
+email-validator>=2.0.0
+
+# Storage (Cloudflare R2 via boto3)
+boto3
+
+# Observability
+structlog>=24.4,<27
+
+# Test and code-quality tools (CI only)
+pytest>=8,<10
+pytest-asyncio>=0.24,<2
+ruff>=0.8,<1
